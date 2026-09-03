@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMOTIONS | LA-MI MALATANG</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .badge--blue {
+            background: rgba(59, 130, 246, 0.15);
+            color: #2563EB;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .promo-img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-family: var(--ff-en);
+            font-weight: 800;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.2;
+        }
+        .bg-gradient-red { background: linear-gradient(135deg, #C41E24, #FF6B35); }
+        .bg-gradient-dark { background: linear-gradient(135deg, #1A1A1A, #4A4A4A); }
+        .bg-gradient-gold { background: linear-gradient(135deg, #D4A843, #B8902F); }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <nav class="nav">
+                    <a href="index.html" class="nav__link" data-i18n="nav_home">HOME</a>
+                    <a href="menu.html" class="nav__link" data-i18n="nav_menu">MENU</a>
+                    <a href="index.html#how-to-order" class="nav__link" data-i18n="nav_how_to_order">HOW TO ORDER</a>
+                </nav>
+            </div>
+            
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/logo.png" alt="LA-MI MALATANG">
+                <div class="header__logo-text">LA-MI<small>MALATANG</small></div>
+            </a>
+            
+            <div class="header__right">
+                <nav class="nav">
+                    <a href="branches.html" class="nav__link" data-i18n="nav_branches">BRANCHES</a>
+                    <a href="promotions.html" class="nav__link active" data-i18n="nav_promotions">PROMOTIONS</a>
+                    <a href="index.html#about" class="nav__link" data-i18n="nav_about">ABOUT</a>
+                    <a href="index.html#contact" class="nav__link" data-i18n="nav_contact">CONTACT</a>
+                </nav>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="th">TH</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu__link" data-i18n="nav_home">HOME</a>
+        <a href="menu.html" class="mobile-menu__link" data-i18n="nav_menu">MENU</a>
+        <a href="index.html#how-to-order" class="mobile-menu__link" data-i18n="nav_how_to_order">HOW TO ORDER</a>
+        <a href="branches.html" class="mobile-menu__link" data-i18n="nav_branches">BRANCHES</a>
+        <a href="promotions.html" class="mobile-menu__link active" data-i18n="nav_promotions">PROMOTIONS</a>
+        <a href="index.html#about" class="mobile-menu__link" data-i18n="nav_about">ABOUT</a>
+        <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav_contact">CONTACT</a>
+        <div class="lang-switch lang-switch--mobile">
+            <button class="lang-btn active" data-lang="th">TH</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero reveal">
+        <div class="container">
+            <h2><span data-i18n="promo_page_title_1">PROMOTIONS & </span><span class="text-primary" data-i18n="promo_page_title_accent">NEWS</span></h2>
+            <p data-i18n="promo_page_sub">โปรโมชั่นและข่าวสารจาก LA-MI MALATANG</p>
+        </div>
+    </section>
+
+    <!-- PROMOTIONS SECTION -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="category-tabs mb-xl">
+                <button class="category-tab active" data-filter="all" data-i18n="tab_all">ALL</button>
+                <button class="category-tab" data-filter="promo" data-i18n="tab_promo">PROMOTIONS</button>
+                <button class="category-tab" data-filter="news" data-i18n="tab_news">NEWS</button>
+                <button class="category-tab" data-filter="event" data-i18n="tab_event">EVENTS</button>
+            </div>
+
+            <div class="promo-grid">
+                <!-- CARD 1 -->
+                <div class="promo-card" data-category="promotion">
+                    <div class="promo-card__img">
+                        <img src="assets/images/food_promo.jpg" alt="Promo">
+                        <div class="badge badge--primary promo-card__badge">โปรโมชั่น</div>
+                    </div>
+                    <div class="promo-card__body">
+                        <div class="promo-card__date">1 กันยายน 2026</div>
+                        <h3 class="promo-card__title">NEW CUSTOMER WELCOME</h3>
+                        <p class="promo-card__desc">โปรโมชั่นต้อนรับลูกค้าใหม่ — รายละเอียดเพิ่มเติมเร็ว ๆ นี้</p>
+                        <a href="#" class="btn btn--secondary btn--sm">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="promo-card" data-category="promotion">
+                    <div class="promo-card__img">
+                        <div class="promo-img-placeholder bg-gradient-red" style="font-size: 2rem;">🔥 WEEKLY SPECIAL</div>
+                        <div class="badge badge--primary promo-card__badge">โปรโมชั่น</div>
+                    </div>
+                    <div class="promo-card__body">
+                        <div class="promo-card__date">1 กันยายน 2026</div>
+                        <h3 class="promo-card__title">WEEKLY SPECIAL</h3>
+                        <p class="promo-card__desc">โปรโมชั่นประจำสัปดาห์ — รายละเอียดเพิ่มเติมเร็ว ๆ นี้</p>
+                        <a href="#" class="btn btn--secondary btn--sm">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="promo-card" data-category="event">
+                    <div class="promo-card__img">
+                        <img src="assets/images/branch_pattaya.jpg" alt="Event">
+                        <div class="badge badge--gold promo-card__badge">กิจกรรม</div>
+                    </div>
+                    <div class="promo-card__body">
+                        <div class="promo-card__date">Coming Soon</div>
+                        <h3 class="promo-card__title">GRAND OPENING EVENT</h3>
+                        <p class="promo-card__desc">ติดตามข่าวสารกิจกรรมเปิดสาขาใหม่ของ LA-MI MALATANG</p>
+                        <a href="#" class="btn btn--secondary btn--sm">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="promo-card" data-category="event">
+                    <div class="promo-card__img">
+                        <div class="promo-img-placeholder bg-gradient-dark" style="font-size: 1.8rem;">🌶️ MALA CHALLENGE</div>
+                        <div class="badge badge--gold promo-card__badge">กิจกรรม</div>
+                    </div>
+                    <div class="promo-card__body">
+                        <div class="promo-card__date">Coming Soon</div>
+                        <h3 class="promo-card__title">MALA SPICY CHALLENGE</h3>
+                        <p class="promo-card__desc">ท้าความเผ็ด! กิจกรรมสนุก ๆ จาก LA-MI — รายละเอียดเร็ว ๆ นี้</p>
+                        <a href="#" class="btn btn--secondary btn--sm">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="promo-card" data-category="news">
+                    <div class="promo-card__img">
+                        <img src="assets/images/ingredients_flatlay.jpg" alt="News">
+                        <div class="badge badge--blue promo-card__badge">ข่าวสาร</div>
+                    </div>
+                    <div class="promo-card__body">
+                        <div class="promo-card__date">1 กันยายน 2026</div>
+                        <h3 class="promo-card__title">SEASONAL INGREDIENTS UPDATE</h3>
+                        <p class="promo-card__desc">อัปเดตวัตถุดิบตามฤดูกาล — วัตถุดิบสดใหม่พร้อมเสิร์ฟ</p>
+                        <a href="#" class="btn btn--secondary btn--sm">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="promo-card" data-category="news">
+                    <div class="promo-card__img">
+                        <div class="promo-img-placeholder bg-gradient-gold">🏪</div>
+                        <div class="badge badge--blue promo-card__badge">ข่าวสาร</div>
+                    </div>
+                    <div class="promo-card__body">
+                        <div class="promo-card__date">Coming Soon</div>
+                        <h3 class="promo-card__title">FRANCHISE OPPORTUNITY</h3>
+                        <p class="promo-card__desc">สนใจเปิดสาขา LA-MI MALATANG? ข้อมูลเพิ่มเติมเร็ว ๆ นี้</p>
+                        <a href="#" class="btn btn--secondary btn--sm">ติดต่อสอบถาม</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="section section--light reveal text-center">
+        <div class="container">
+            <h2>ไม่พลาดทุกโปรโมชั่น</h2>
+            <p class="text-muted mb-lg">ติดตามข่าวสารและโปรโมชั่นล่าสุดจาก LA-MI MALATANG</p>
+            <div style="display: flex; gap: 20px; justify-content: center; font-size: 2rem;">
+                <a href="#" style="color: #1877F2; text-decoration: none;">📘</a>
+                <a href="#" style="color: #E4405F; text-decoration: none;">📸</a>
+                <a href="#" style="color: #000000; text-decoration: none;">🎵</a>
+                <a href="#" style="color: #00C300; text-decoration: none;">💬</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta reveal">
+        <div class="container">
+            <h2>READY FOR YOUR MALA?</h2>
+            <p>เลือกวัตถุดิบที่คุณชอบ แล้วมาสร้างชามหม่าล่าในแบบของคุณ</p>
+            <div class="btn-group">
+                <a href="branches.html" class="btn btn--white">FIND A BRANCH</a>
+                <a href="menu.html" class="btn btn--outline-white">VIEW MENU</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/images/logo.png" alt="LA-MI MALATANG">
+                    <div class="footer__brand-name">LA-MI MALATANG</div>
+                    <p>อร่อย สะอาด สดใหม่ทุกวัน</p>
+                </div>
+                <div class="footer__col">
+                    <h4>SITEMAP</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="index.html#how-to-order">How to Order</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li><a href="tel:0874955835">📞 087-495-5835</a></li>
+                        <li><a href="https://maps.google.com/?q=8/111-117+Little+Walk+Pattaya+Amphoe+Bang+Lamung+Thailand+Chon+Buri+20150" target="_blank" rel="noopener">📍 8/111-117 Little Walk Pattaya Amphoe Bang Lamung, Thailand, Chon Buri 20150</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093087823403" target="_blank" rel="noopener">Facebook Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2026 LA-MI MALATANG. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

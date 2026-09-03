@@ -1,0 +1,13 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# GEMINI CLI / Antigravity internal files
+.gemini/
+.system_generated/
+*.log
+
+# Node & Temp
+node_modules/
+dist/
+.tmp/

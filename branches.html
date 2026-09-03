@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANCHES | LA-MI MALATANG</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .map-placeholder {
+            background: #E2E8F0;
+            border-radius: var(--radius-lg);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-muted);
+            font-size: var(--fs-h3);
+            text-align: center;
+            padding: var(--space-xl);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <nav class="nav">
+                    <a href="index.html" class="nav__link" data-i18n="nav_home">HOME</a>
+                    <a href="menu.html" class="nav__link" data-i18n="nav_menu">MENU</a>
+                    <a href="index.html#how-to-order" class="nav__link" data-i18n="nav_how_to_order">HOW TO ORDER</a>
+                </nav>
+            </div>
+            
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/logo.png" alt="LA-MI MALATANG">
+                <div class="header__logo-text">LA-MI<small>MALATANG</small></div>
+            </a>
+            
+            <div class="header__right">
+                <nav class="nav">
+                    <a href="branches.html" class="nav__link active" data-i18n="nav_branches">BRANCHES</a>
+                    <a href="promotions.html" class="nav__link" data-i18n="nav_promotions">PROMOTIONS</a>
+                    <a href="index.html#about" class="nav__link" data-i18n="nav_about">ABOUT</a>
+                    <a href="index.html#contact" class="nav__link" data-i18n="nav_contact">CONTACT</a>
+                </nav>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="th">TH</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu__link" data-i18n="nav_home">HOME</a>
+        <a href="menu.html" class="mobile-menu__link" data-i18n="nav_menu">MENU</a>
+        <a href="index.html#how-to-order" class="mobile-menu__link" data-i18n="nav_how_to_order">HOW TO ORDER</a>
+        <a href="branches.html" class="mobile-menu__link active" data-i18n="nav_branches">BRANCHES</a>
+        <a href="promotions.html" class="mobile-menu__link" data-i18n="nav_promotions">PROMOTIONS</a>
+        <a href="index.html#about" class="mobile-menu__link" data-i18n="nav_about">ABOUT</a>
+        <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav_contact">CONTACT</a>
+        <div class="lang-switch lang-switch--mobile">
+            <button class="lang-btn active" data-lang="th">TH</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero reveal">
+        <div class="container">
+            <h2><span data-i18n="branch_page_title_1">FIND YOUR </span><span class="text-primary" data-i18n="branch_page_title_accent">LA-MI</span></h2>
+            <p data-i18n="branch_page_sub">เลือกสาขาที่ใกล้คุณ</p>
+        </div>
+    </section>
+
+    <!-- BRANCHES SECTION -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="branch-filter">
+                <select id="branchProvince">
+                    <option value="all" data-i18n="prov_all">ทุกจังหวัด</option>
+                    <option value="chonburi" data-i18n="prov_chonburi">ชลบุรี</option>
+                </select>
+                <select id="branchDistrict">
+                    <option value="all" data-i18n="dist_all">ทุกเขต/อำเภอ</option>
+                    <option value="banglamung" data-i18n="dist_banglamung">บางละมุง</option>
+                    <option value="sriracha" data-i18n="dist_sriracha">ศรีราชา</option>
+                </select>
+            </div>
+
+            <div class="branch-grid">
+                <!-- BRANCH 1 -->
+                <div class="branch-card" data-province="chonburi" data-district="banglamung">
+                    <div class="branch-card__img">
+                        <img src="assets/images/branch_pattaya.jpg" alt="Pattaya Branch">
+                    </div>
+                    <div class="branch-card__body">
+                        <h3 class="branch-card__name">LA-MI MALATANG PATTAYA</h3>
+                        <div class="branch-card__info">
+                            <div class="branch-card__info-row">
+                                <div class="branch-card__info-icon">📍</div>
+                                <span><a href="https://www.google.com/maps?cid=8609748477386677717" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">8/111-117 Little Walk Pattaya Amphoe Bang Lamung, Thailand, Chon Buri 20150</a></span>
+                            </div>
+                            <div class="branch-card__info-row">
+                                <div class="branch-card__info-icon">📞</div>
+                                <span><a href="tel:0874955835" style="color: inherit; text-decoration: none;">087-495-5835</a></span>
+                            </div>
+                        </div>
+                        <div class="branch-card__hours">
+                            <h4 data-i18n="hours_title">เวลาเปิด-ปิด</h4>
+                            <div class="branch-card__hours-row">
+                                <span data-i18n="days_mon_fri">จันทร์–ศุกร์</span><span>11:00 - 22:00</span>
+                            </div>
+                            <div class="branch-card__hours-row">
+                                <span data-i18n="days_sat">เสาร์</span><span>11:00 - 22:00</span>
+                            </div>
+                            <div class="branch-card__hours-row">
+                                <span data-i18n="days_sun">อาทิตย์</span><span>11:00 - 22:00</span>
+                            </div>
+                        </div>
+                        <div class="branch-card__actions">
+                            <a href="https://www.google.com/maps?cid=8609748477386677717" target="_blank" rel="noopener" class="btn btn--primary" style="flex: 1;" data-i18n="btn_directions">GET DIRECTIONS</a>
+                            <a href="tel:0874955835" class="btn btn--secondary" style="flex: 1;" data-i18n="btn_call">โทรสอบถาม</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BRANCH 2 -->
+                <div class="branch-card" data-province="chonburi" data-district="sriracha">
+                    <div class="branch-card__img">
+                        <img src="assets/images/branch_aoudom.jpg" alt="Ao Udom Branch">
+                    </div>
+                    <div class="branch-card__body">
+                        <h3 class="branch-card__name">LA-MI MALATANG AO UDOM</h3>
+                        <div class="branch-card__info">
+                            <div class="branch-card__info-row">
+                                <div class="branch-card__info-icon">📍</div>
+                                <span><a href="https://www.google.com/maps?cid=16844624302920910199" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">อ่าวอุดม ศรีราชา ชลบุรี</a></span>
+                            </div>
+                            <div class="branch-card__info-row">
+                                <div class="branch-card__info-icon">📞</div>
+                                <span><a href="tel:0874955835" style="color: inherit; text-decoration: none;">087-495-5835</a></span>
+                            </div>
+                        </div>
+                        <div class="branch-card__hours">
+                            <h4 data-i18n="hours_title">เวลาเปิด-ปิด</h4>
+                            <div class="branch-card__hours-row">
+                                <span data-i18n="days_mon_fri">จันทร์–ศุกร์</span><span>11:00 - 22:00</span>
+                            </div>
+                            <div class="branch-card__hours-row">
+                                <span data-i18n="days_sat">เสาร์</span><span>11:00 - 22:00</span>
+                            </div>
+                            <div class="branch-card__hours-row">
+                                <span data-i18n="days_sun">อาทิตย์</span><span>11:00 - 22:00</span>
+                            </div>
+                        </div>
+                        <div class="branch-card__actions">
+                            <a href="https://www.google.com/maps?cid=16844624302920910199" target="_blank" rel="noopener" class="btn btn--primary" style="flex: 1;" data-i18n="btn_directions">GET DIRECTIONS</a>
+                            <a href="tel:0874955835" class="btn btn--secondary" style="flex: 1;" data-i18n="btn_call">โทรสอบถาม</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section section--offwhite reveal">
+        <div class="container">
+            <div class="section-heading">
+                <h2 data-i18n="map_heading">Our Locations</h2>
+                <p data-i18n="map_sub">แผนที่สาขาของ LA-MI MALATANG</p>
+            </div>
+            <div class="branch-map-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--space-lg);">
+                
+                <!-- Pattaya Map -->
+                <div class="map-item">
+                    <h3 style="font-family: var(--ff-en); font-size: 1.15rem; margin-bottom: 12px; text-align: center; color: var(--clr-charcoal);">La-Mi Malatang สาขาพัทยา</h3>
+                    <div class="map-container" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.563421246247!2d100.90113157592214!3d12.93575758737631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310295325330ac7d%3A0x777bf89fb017ddd5!2sLa-Mi%20Malatang!5e0!3m2!1sth!2sth!4v1788448262429!5m2!1sth!2sth" width="100%" height="350" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+
+                <!-- Ao Udom Map -->
+                <div class="map-item">
+                    <h3 style="font-family: var(--ff-en); font-size: 1.15rem; margin-bottom: 12px; text-align: center; color: var(--clr-charcoal);">Lami Malatang สาขาอ่าวอุดม</h3>
+                    <div class="map-container" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.618178094772!2d100.91439997592482!3d13.123357887206222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b900331a1cfd%3A0xe9c4208e8e834577!2zTGFtaSBNYWxhdGFuZyDguKrguLLguILguLLguK3guYjguLLguKfguK3guLjguJTguKE!5e0!3m2!1sth!2sth!4v1788448232757!5m2!1sth!2sth" width="100%" height="350" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT BAR -->
+    <div class="contact-bar reveal">
+        <div class="container contact-bar__inner">
+            <a href="tel:0874955835" class="contact-bar__item">📞 087-495-5835</a>
+            <a href="https://www.facebook.com/profile.php?id=100093087823403" target="_blank" rel="noopener" class="contact-bar__item">💬 Facebook Page</a>
+        </div>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta reveal">
+        <div class="container">
+            <h2>READY FOR YOUR MALA?</h2>
+            <p>เลือกวัตถุดิบที่คุณชอบ แล้วมาสร้างชามหม่าล่าในแบบของคุณ</p>
+            <div class="btn-group">
+                <a href="menu.html" class="btn btn--white">VIEW MENU</a>
+                <a href="index.html" class="btn btn--outline-white">HOME</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/images/logo.png" alt="LA-MI MALATANG">
+                    <div class="footer__brand-name">LA-MI MALATANG</div>
+                    <p>อร่อย สะอาด สดใหม่ทุกวัน</p>
+                </div>
+                <div class="footer__col">
+                    <h4>SITEMAP</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="index.html#how-to-order">How to Order</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li><a href="tel:0874955835">📞 087-495-5835</a></li>
+                        <li><a href="https://maps.google.com/?q=8/111-117+Little+Walk+Pattaya+Amphoe+Bang+Lamung+Thailand+Chon+Buri+20150" target="_blank" rel="noopener">📍 8/111-117 Little Walk Pattaya Amphoe Bang Lamung, Thailand, Chon Buri 20150</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093087823403" target="_blank" rel="noopener">Facebook Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2026 LA-MI MALATANG. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

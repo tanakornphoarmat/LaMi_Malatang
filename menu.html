@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU | LA-MI MALATANG</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .placeholder-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .bg-meat { background: linear-gradient(135deg, #FDE8E8, #FECACA); }
+        .bg-meatball { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
+        .bg-vegetable { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
+        .bg-mushroom { background: linear-gradient(135deg, #F5F0E8, #E8DFD0); }
+        .bg-tofu { background: linear-gradient(135deg, #FFF8E7, #FEF3C7); }
+        .bg-noodle { background: linear-gradient(135deg, #FEF9C3, #FDE68A); }
+        .bg-other { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <nav class="nav">
+                    <a href="index.html" class="nav__link" data-i18n="nav_home">HOME</a>
+                    <a href="menu.html" class="nav__link active" data-i18n="nav_menu">MENU</a>
+                    <a href="index.html#how-to-order" class="nav__link" data-i18n="nav_how_to_order">HOW TO ORDER</a>
+                </nav>
+            </div>
+            
+            <a href="index.html" class="header__logo">
+                <img src="assets/images/logo.png" alt="LA-MI MALATANG">
+                <div class="header__logo-text">LA-MI<small>MALATANG</small></div>
+            </a>
+            
+            <div class="header__right">
+                <nav class="nav">
+                    <a href="branches.html" class="nav__link" data-i18n="nav_branches">BRANCHES</a>
+                    <a href="promotions.html" class="nav__link" data-i18n="nav_promotions">PROMOTIONS</a>
+                    <a href="index.html#about" class="nav__link" data-i18n="nav_about">ABOUT</a>
+                    <a href="index.html#contact" class="nav__link" data-i18n="nav_contact">CONTACT</a>
+                </nav>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="th">TH</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu__overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu__link" data-i18n="nav_home">HOME</a>
+        <a href="menu.html" class="mobile-menu__link active" data-i18n="nav_menu">MENU</a>
+        <a href="index.html#how-to-order" class="mobile-menu__link" data-i18n="nav_how_to_order">HOW TO ORDER</a>
+        <a href="branches.html" class="mobile-menu__link" data-i18n="nav_branches">BRANCHES</a>
+        <a href="promotions.html" class="mobile-menu__link" data-i18n="nav_promotions">PROMOTIONS</a>
+        <a href="index.html#about" class="mobile-menu__link" data-i18n="nav_about">ABOUT</a>
+        <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav_contact">CONTACT</a>
+        <div class="lang-switch lang-switch--mobile">
+            <button class="lang-btn active" data-lang="th">TH</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero reveal">
+        <div class="container">
+            <h2><span data-i18n="menu_page_title_1">OUR </span><span class="text-primary" data-i18n="menu_page_title_accent">MENU</span></h2>
+            <p data-i18n="menu_page_sub">เลือกวัตถุดิบสดใหม่กว่า 50+ ชนิด ในราคาเพียง 35 บาท / 100 กรัม</p>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="search-bar reveal">
+                <input type="text" id="menuSearch" placeholder="ค้นหาวัตถุดิบ..." data-i18n-ph="search_placeholder">
+                <button>🔍</button>
+            </div>
+
+            <div class="category-tabs reveal">
+                <button class="category-tab active" data-filter="all" data-i18n="cat_all">ALL</button>
+                <button class="category-tab" data-filter="meat" data-i18n="cat_meat">MEAT</button>
+                <button class="category-tab" data-filter="meatball" data-i18n="cat_balls">MEATBALL</button>
+                <button class="category-tab" data-filter="vegetable" data-i18n="cat_veg">VEGETABLE</button>
+                <button class="category-tab" data-filter="tofu" data-i18n="cat_soup">SOUP BROTH</button>
+                <button class="category-tab" data-filter="noodle" data-i18n="cat_noodles">NOODLE</button>
+            </div>
+
+            <div class="menu-grid reveal">
+                <!-- MEAT -->
+                <div class="ingredient-card" data-category="meat">
+                    <div class="ingredient-card__img"><img src="assets/images/beef_slice.png" alt="Beef"></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เนื้อวัวสไลซ์</div>
+                        <div class="ingredient-card__name-en">Sliced Beef</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meat">
+                    <div class="ingredient-card__img"><img src="assets/images/pork_slice.png" alt="Pork"></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เนื้อหมูสไลซ์</div>
+                        <div class="ingredient-card__name-en">Sliced Pork</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meat">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meat">🥓</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">หมูสามชั้น</div>
+                        <div class="ingredient-card__name-en">Pork Belly</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meat">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meat">🐑</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เนื้อแกะ</div>
+                        <div class="ingredient-card__name-en">Lamb</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meat">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meat">🌭</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ไส้กรอก</div>
+                        <div class="ingredient-card__name-en">Sausage</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+
+                <!-- MEATBALL -->
+                <div class="ingredient-card" data-category="meatball">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meatball">🍡</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ลูกชิ้นหมู</div>
+                        <div class="ingredient-card__name-en">Pork Ball</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meatball">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meatball">🧆</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ลูกชิ้นเนื้อ</div>
+                        <div class="ingredient-card__name-en">Beef Ball</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meatball">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meatball">🐟</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ลูกชิ้นปลา</div>
+                        <div class="ingredient-card__name-en">Fish Ball</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="meatball">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-meatball">🦐</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ลูกชิ้นกุ้ง</div>
+                        <div class="ingredient-card__name-en">Shrimp Ball</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+
+                <!-- VEGETABLE -->
+                <div class="ingredient-card" data-category="vegetable">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-vegetable">🥬</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ผักบุ้ง</div>
+                        <div class="ingredient-card__name-en">Morning Glory</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="vegetable">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-vegetable">🥬</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ผักกาดขาว</div>
+                        <div class="ingredient-card__name-en">Chinese Cabbage</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="vegetable">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-vegetable">🌽</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ข้าวโพด</div>
+                        <div class="ingredient-card__name-en">Corn</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="vegetable">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-vegetable">🍅</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">มะเขือเทศ</div>
+                        <div class="ingredient-card__name-en">Tomato</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="vegetable">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-vegetable">🥦</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ผักกวางตุ้ง</div>
+                        <div class="ingredient-card__name-en">Choy Sum</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+
+                <!-- MUSHROOM -->
+                <div class="ingredient-card" data-category="mushroom">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-mushroom">🍄</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เห็ดเข็มทอง</div>
+                        <div class="ingredient-card__name-en">Enoki Mushroom</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="mushroom">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-mushroom">🍄</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เห็ดหอม</div>
+                        <div class="ingredient-card__name-en">Shiitake Mushroom</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="mushroom">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-mushroom">🍄</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เห็ดนางฟ้า</div>
+                        <div class="ingredient-card__name-en">Oyster Mushroom</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="mushroom">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-mushroom">🍄</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เห็ดหูหนู</div>
+                        <div class="ingredient-card__name-en">Wood Ear</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+
+                <!-- TOFU -->
+                <div class="ingredient-card" data-category="tofu">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-tofu">🧈</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เต้าหู้ขาว</div>
+                        <div class="ingredient-card__name-en">White Tofu</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="tofu">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-tofu">🥚</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เต้าหู้ไข่</div>
+                        <div class="ingredient-card__name-en">Egg Tofu</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="tofu">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-tofu">🧇</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เต้าหู้ทอด</div>
+                        <div class="ingredient-card__name-en">Fried Tofu</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+
+                <!-- NOODLE -->
+                <div class="ingredient-card" data-category="noodle">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-noodle">🍜</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">วุ้นเส้น</div>
+                        <div class="ingredient-card__name-en">Glass Noodle</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="noodle">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-noodle">🍝</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เส้นหมี่</div>
+                        <div class="ingredient-card__name-en">Rice Vermicelli</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="noodle">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-noodle">🍜</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">บะหมี่</div>
+                        <div class="ingredient-card__name-en">Egg Noodle</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+
+                <!-- OTHER -->
+                <div class="ingredient-card" data-category="other">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-other">🪷</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">รากบัว</div>
+                        <div class="ingredient-card__name-en">Lotus Root</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="other">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-other">🥟</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">เกี๊ยวซ่า</div>
+                        <div class="ingredient-card__name-en">Gyoza</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-category="other">
+                    <div class="ingredient-card__img"><div class="placeholder-img bg-other">🥙</div></div>
+                    <div class="ingredient-card__body">
+                        <div class="ingredient-card__name">ฟองเต้าหู้</div>
+                        <div class="ingredient-card__name-en">Tofu Skin</div>
+                        <div class="ingredient-card__price">35 THB <span>/ 100g</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICE CALCULATOR -->
+    <section class="section section--light reveal">
+        <div class="container">
+            <div class="section-heading">
+                <h2>WONDERING HOW MUCH?</h2>
+                <p>เลื่อนเพื่อดูราคาโดยประมาณ</p>
+            </div>
+            <div class="calculator">
+                <div class="calculator__display">
+                    <div class="calculator__weight" id="calcWeight">100<span> g</span></div>
+                    <div class="calculator__price" id="calcPrice">฿35 <span>THB</span></div>
+                </div>
+                <div class="calculator__slider">
+                    <input type="range" id="calcSlider" min="100" max="1000" step="50" value="100">
+                </div>
+                <div class="calculator__presets">
+                    <button class="calculator__preset active" data-weight="100">100g</button>
+                    <button class="calculator__preset" data-weight="200">200g</button>
+                    <button class="calculator__preset" data-weight="300">300g</button>
+                    <button class="calculator__preset" data-weight="500">500g</button>
+                </div>
+                <p class="calculator__note">ราคานี้เป็นการคำนวณเบื้องต้น ราคาและเงื่อนไขอาจเปลี่ยนแปลงตามสาขา</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta reveal">
+        <div class="container">
+            <h2>READY FOR YOUR MALA?</h2>
+            <p>เลือกวัตถุดิบที่คุณชอบ แล้วมาสร้างชามหม่าล่าในแบบของคุณ</p>
+            <div class="btn-group">
+                <a href="branches.html" class="btn btn--white">FIND A BRANCH</a>
+                <a href="menu.html" class="btn btn--outline-white">VIEW MENU</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/images/logo.png" alt="LA-MI MALATANG">
+                    <div class="footer__brand-name">LA-MI MALATANG</div>
+                    <p>อร่อย สะอาด สดใหม่ทุกวัน</p>
+                </div>
+                <div class="footer__col">
+                    <h4>SITEMAP</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="index.html#how-to-order">How to Order</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>CONTACT</h4>
+                    <ul>
+                        <li><a href="tel:0874955835">📞 087-495-5835</a></li>
+                        <li><a href="https://maps.google.com/?q=8/111-117+Little+Walk+Pattaya+Amphoe+Bang+Lamung+Thailand+Chon+Buri+20150" target="_blank" rel="noopener">📍 8/111-117 Little Walk Pattaya Amphoe Bang Lamung, Thailand, Chon Buri 20150</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4>FOLLOW US</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100093087823403" target="_blank" rel="noopener">Facebook Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2026 LA-MI MALATANG. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
