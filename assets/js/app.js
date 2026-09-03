@@ -73,6 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px -50px 0px'
     });
     revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Safety fallback: Ensure all content becomes visible after 1 second if scroll observer didn't trigger
+    setTimeout(() => {
+        revealElements.forEach(el => el.classList.add('visible'));
+    }, 1000);
 
     // ---------- COUNTER NUMBER ANIMATION ----------
     const counters = document.querySelectorAll('[data-count]');
@@ -242,12 +247,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------- IMAGE LAZY LOADING ----------
     const lazyImages = document.querySelectorAll('img[data-src]');
-    const lazyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
+    if (lazyImages.length > 0) {
+        const lazyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    lazyObserver.unobserve(img);
+                }
+            });
+        }, { threshold: 0.1 });
+        lazyImages.forEach(img => lazyObserver.observe(img));
+    }
+
     // ---------- REAL REVIEWS LIGHTBOX MODAL ----------
     const reviewCards = document.querySelectorAll('.real-review-card');
     if (reviewCards.length > 0) {
