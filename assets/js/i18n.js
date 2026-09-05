@@ -5,15 +5,15 @@
 const translations = {
     th: {
         // Navigation
-        nav_home: "HOME",
-        nav_menu: "MENU",
-        nav_how_to_order: "HOW TO ORDER",
-        nav_branches: "BRANCHES",
-        nav_promotions: "PROMOTIONS",
-        nav_about: "ABOUT",
-        nav_contact: "CONTACT",
+        nav_home: "หน้าแรก",
+        nav_menu: "เมนูอาหาร",
+        nav_how_to_order: "วิธีสั่งซื้อ",
+        nav_branches: "ค้นหาสาขา",
+        nav_promotions: "โปรโมชั่น",
+        nav_about: "เกี่ยวกับเรา",
+        nav_contact: "ติดต่อเรา",
         nav_btn_menu: "ดูเมนู",
-        nav_btn_branch: "FIND A BRANCH",
+        nav_btn_branch: "ค้นหาสาขา",
 
         // Hero
         hero_badge: "🔥 MALA DIY",
@@ -93,7 +93,7 @@ const translations = {
         // Menu Page
         menu_page_title_1: "OUR ",
         menu_page_title_accent: "MENU",
-        menu_page_sub: "เลือกวัตถุดิบสดใหม่กว่า 50+ ชนิด ในราคาเพียง 35 บาท / 100 กรัม",
+        menu_page_sub: "เลือกวัตถุดิบสดใหม่กว่า 50+ ชนิด ในราคาเพียง 45 บาท / 100 กรัม",
         search_placeholder: "ค้นหาวัตถุดิบ...",
         cat_all: "ทั้งหมด",
         cat_meat: "เนื้อสัตว์",
@@ -129,12 +129,63 @@ const translations = {
         tab_promo: "โปรโมชั่น",
         tab_news: "ข่าวสาร",
         tab_event: "กิจกรรม",
+        promo_follow_title: "ไม่พลาดทุกโปรโมชั่น",
+        promo_follow_sub: "ติดตามข่าวสารและโปรโมชั่นล่าสุดจาก LA-MI MALATANG",
+        btn_follow_fb: "ติดตามเราบน FACEBOOK",
 
         // Footer
         footer_desc: "ร้านหม่าล่าทั่งสไตล์ DIY ตักเอง คัดสรรวัตถุดิบสดใหม่ อร่อย สะอาด ทุกวัน",
         footer_quick: "QUICK LINKS",
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
+        
+        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่งอันดับ 1 สไตล์ DIY",
+        doc_title_menu: "MENU | LA-MI MALATANG",
+        doc_title_branches: "BRANCHES | LA-MI MALATANG",
+        doc_title_promotions: "PROMOTIONS | LA-MI MALATANG",
+        
+        insta_title: "FOLLOW LA-MI",
+        counter_price_label: "ราคาเริ่มต้น / 100g",
+
+        calc_title: "WONDERING HOW MUCH?",
+        calc_sub: "เลื่อนเพื่อดูราคาโดยประมาณ",
+
+        branches_filter_label: "ค้นหาด้วยจังหวัด/เขต",
+        branch_pattaya_name: "LA-MI MALATANG PATTAYA",
+        branch_aoudom_name: "LA-MI MALATANG AO UDOM",
+        branch_aoudom_addr: "อ่าวอุดม ศรีราชา ชลบุรี",
+        map_pattaya: "La-Mi Malatang สาขาพัทยา",
+        map_aoudom: "Lami Malatang สาขาอ่าวอุดม",
+
+        badge_promo: "โปรโมชั่น",
+        badge_event: "กิจกรรม",
+        badge_news: "ข่าวสาร",
+        promo_date_1: "1 กันยายน 2026",
+        promo_date_soon: "Coming Soon",
+        btn_details: "ดูรายละเอียด",
+        btn_contact_us: "ติดต่อเรา",
+
+        p1_title: "NEW CUSTOMER WELCOME",
+        p1_desc: "โปรโมชั่นต้อนรับลูกค้าใหม่ — รายละเอียดเพิ่มเติมเร็ว ๆ นี้",
+        p2_title: "WEEKLY SPECIAL",
+        p2_desc: "โปรโมชั่นประจำสัปดาห์ — รายละเอียดเพิ่มเติมเร็ว ๆ นี้",
+        p3_title: "GRAND OPENING EVENT",
+        p3_desc: "ติดตามข่าวสารกิจกรรมเปิดสาขาใหม่ของ LA-MI MALATANG",
+        p4_title: "MALA SPICY CHALLENGE",
+        p4_desc: "ท้าความเผ็ด! กิจกรรมสนุก ๆ จาก LA-MI — รายละเอียดเร็ว ๆ นี้",
+        p5_title: "SEASONAL INGREDIENTS UPDATE",
+        p5_desc: "อัปเดตวัตถุดิบตามฤดูกาล — วัตถุดิบสดใหม่พร้อมเสิร์ฟ",
+        p6_title: "FRANCHISE OPPORTUNITY",
+        p6_desc: "สนใจเปิดสาขา LA-MI MALATANG? ติดต่อทีมงานเลย",
+
+        footer_tagline: "สด สะอาด อร่อยทุกวัน",
+        footer_sitemap: "SITEMAP",
+        footer_contact: "CONTACT",
+        footer_follow: "FOLLOW US",
+        footer_fb_page: "Facebook Page",
+        
+        calc_note: "ราคาประเมินอาจมีความคลาดเคลื่อนเล็กน้อย ขึ้นอยู่กับน้ำหนักจริงหน้าร้าน",
+        footer_brand_desc: "ร้านหม่าล่าทั่งสไตล์ DIY ตักเอง คัดสรรวัตถุดิบสดใหม่ อร่อย สะอาด ทุกวัน",
         footer_copy: "© 2026 LA-MI MALATANG. All Rights Reserved."
     },
 
@@ -228,7 +279,7 @@ const translations = {
         // Menu Page
         menu_page_title_1: "OUR ",
         menu_page_title_accent: "MENU",
-        menu_page_sub: "Choose from 50+ fresh ingredients at only 35 THB / 100g",
+        menu_page_sub: "Choose from 50+ fresh ingredients at only 45 THB / 100g",
         search_placeholder: "Search ingredients...",
         cat_all: "All",
         cat_meat: "Meat",
@@ -264,12 +315,63 @@ const translations = {
         tab_promo: "Promotions",
         tab_news: "News",
         tab_event: "Events",
+        promo_follow_title: "DON'T MISS ANY PROMOTION",
+        promo_follow_sub: "Follow the latest news & promotions from LA-MI MALATANG",
+        btn_follow_fb: "FOLLOW US ON FACEBOOK",
 
         // Footer
         footer_desc: "Authentic DIY Malatang chain store serving fresh daily ingredients.",
         footer_quick: "QUICK LINKS",
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
+        
+        doc_title_home: "LA-MI MALATANG | No.1 DIY Malatang Restaurant",
+        doc_title_menu: "MENU | LA-MI MALATANG",
+        doc_title_branches: "BRANCHES | LA-MI MALATANG",
+        doc_title_promotions: "PROMOTIONS | LA-MI MALATANG",
+
+        insta_title: "FOLLOW LA-MI",
+        counter_price_label: "Starting / 100g",
+
+        calc_title: "WONDERING HOW MUCH?",
+        calc_sub: "Slide to estimate your meal cost",
+
+        branches_filter_label: "Filter by Province / District",
+        branch_pattaya_name: "LA-MI MALATANG PATTAYA",
+        branch_aoudom_name: "LA-MI MALATANG AO UDOM",
+        branch_aoudom_addr: "Ao Udom, Si Racha, Chonburi",
+        map_pattaya: "La-Mi Malatang Pattaya Branch",
+        map_aoudom: "Lami Malatang Ao Udom Branch",
+
+        badge_promo: "Promotion",
+        badge_event: "Event",
+        badge_news: "News",
+        promo_date_1: "September 1, 2026",
+        promo_date_soon: "Coming Soon",
+        btn_details: "View Details",
+        btn_contact_us: "Contact Us",
+
+        p1_title: "NEW CUSTOMER WELCOME",
+        p1_desc: "Welcome promotion for new customers — details coming soon",
+        p2_title: "WEEKLY SPECIAL",
+        p2_desc: "Weekly special deals — details coming soon",
+        p3_title: "GRAND OPENING EVENT",
+        p3_desc: "Stay tuned for grand opening event updates of new branches",
+        p4_title: "MALA SPICY CHALLENGE",
+        p4_desc: "Spicy challenge! Fun activities from LA-MI — coming soon",
+        p5_title: "SEASONAL INGREDIENTS UPDATE",
+        p5_desc: "Seasonal ingredient updates — fresh items ready to serve",
+        p6_title: "FRANCHISE OPPORTUNITY",
+        p6_desc: "Interested in opening a LA-MI MALATANG franchise? Contact us today",
+
+        footer_tagline: "Fresh, Clean & Delicious Daily",
+        footer_sitemap: "SITEMAP",
+        footer_contact: "CONTACT",
+        footer_follow: "FOLLOW US",
+        footer_fb_page: "Facebook Page",
+        
+        calc_note: "Estimated price may vary slightly depending on actual scale weight at store",
+        footer_brand_desc: "Authentic DIY Malatang chain store serving fresh daily ingredients.",
         footer_copy: "© 2026 LA-MI MALATANG. All Rights Reserved."
     }
 };

@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcWeight = document.getElementById('calcWeight');
     const calcPrice = document.getElementById('calcPrice');
     const calcPresets = document.querySelectorAll('.calculator__preset');
-    const PRICE_PER_100G = 35; // Easily editable price
+    const PRICE_PER_100G = 45; // Easily editable price
 
     if (calcSlider) {
         const updateCalculator = (weight) => {

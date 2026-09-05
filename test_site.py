@@ -10,12 +10,12 @@ assets = [
     '/assets/js/app.js',
     '/assets/images/logo.png',
     '/assets/images/hero_mala_bowl.jpg',
-    '/assets/images/step1_pick.jpg',
-    '/assets/images/step2_weigh.jpg',
-    '/assets/images/step3_flavor.jpg',
-    '/assets/images/step4_enjoy.jpg',
-    '/assets/images/review_1.png',
-    '/assets/images/review_10.png'
+    '/assets/images/steps/step1_pick.jpg',
+    '/assets/images/steps/step2_weigh.jpg',
+    '/assets/images/steps/step3_flavor.jpg',
+    '/assets/images/steps/step4_enjoy.jpg',
+    '/assets/images/reviews/review_1.png',
+    '/assets/images/reviews/review_10.png'
 ]
 
 print("=== STARTING AUTOMATED TEST SUITE FOR LA-MI MALATANG ===\n")
