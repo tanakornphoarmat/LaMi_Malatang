@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect internally to .html if the file exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Error Documents
+ErrorDocument 404 /404.html
