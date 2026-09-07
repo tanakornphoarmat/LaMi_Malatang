@@ -1,9 +1,10 @@
 import urllib.request
 import re
 import os
+import json
 
 base_url = 'http://localhost:3000'
-pages = ['/', '/index.html', '/menu.html', '/branches.html', '/promotions.html']
+pages = ['/', '/index.html', '/menu.html', '/branches.html', '/promotions.html', '/404.html']
 assets = [
     '/assets/css/styles.css',
     '/assets/js/i18n.js',
@@ -14,8 +15,10 @@ assets = [
     '/assets/images/steps/step2_weigh.jpg',
     '/assets/images/steps/step3_flavor.jpg',
     '/assets/images/steps/step4_enjoy.jpg',
-    '/assets/images/reviews/review_1.png',
-    '/assets/images/reviews/review_10.png'
+    '/assets/images/reviews/review_1.jpg',
+    '/assets/images/reviews/review_10.jpg',
+    '/robots.txt',
+    '/sitemap.xml'
 ]
 
 print("=== STARTING AUTOMATED TEST SUITE FOR LA-MI MALATANG ===\n")
@@ -60,7 +63,7 @@ for a in assets:
 
 # 3. Check for broken internal links in HTML files
 print("\n--- 3. Testing HTML Internal Links & References ---")
-html_files = ['index.html', 'menu.html', 'branches.html', 'promotions.html']
+html_files = ['index.html', 'menu.html', 'branches.html', 'promotions.html', '404.html']
 for h in html_files:
     path = os.path.join('D:/mala', h)
     if os.path.exists(path):
@@ -86,5 +89,38 @@ for h in html_files:
         else:
             print(f"  [FAIL] {h} -> Broken links found: {broken}")
             failed += 1
+
+# 4. Validate Schema.org JSON-LD structured data
+print("\n--- 4. Testing Structured Data (Schema.org / JSON-LD) ---")
+for h in ['index.html', 'branches.html']:
+    path = os.path.join('D:/mala', h)
+    with open(path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', content, re.S)
+    if not m:
+        print(f"  [FAIL] {h} -> No JSON-LD block found")
+        failed += 1
+        continue
+    try:
+        data = json.loads(m.group(1))
+        types = [n.get('@type') for n in data['@graph']]
+        print(f"  [PASS] {h} -> Valid JSON-LD ({len(types)} nodes)")
+        passed += 1
+    except Exception as e:
+        print(f"  [FAIL] {h} -> Invalid JSON-LD: {e}")
+        failed += 1
+
+# 5. Verify sitemap lists every public page
+print("\n--- 5. Testing sitemap.xml Coverage ---")
+with open(os.path.join('D:/mala', 'sitemap.xml'), 'r', encoding='utf-8') as f:
+    sitemap = f.read()
+url_count = sitemap.count('<loc>')
+missing = [h for h in ['menu.html', 'branches.html', 'promotions.html'] if h not in sitemap]
+if not missing and '<loc>' in sitemap:
+    print(f"  [PASS] sitemap.xml -> {url_count} URLs listed, all pages covered")
+    passed += 1
+else:
+    print(f"  [FAIL] sitemap.xml -> Missing pages: {missing}")
+    failed += 1
 
 print(f"\n=== FINAL TEST RESULTS: {passed} PASSED, {failed} FAILED ===")

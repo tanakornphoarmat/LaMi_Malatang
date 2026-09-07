@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="doc_title_404">ไม่พบหน้านี้ | LA-MI MALATANG</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/png" href="assets/images/logo_icon.png">
+    <!-- Styles are inlined so this page still renders if it is served from a
+         deeper path where the relative stylesheet link would not resolve. -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Sarabun:wght@300;400;600&display=swap');
+        :root {
+            --clr-primary: #0077B6;
+            --clr-primary-dark: #03045E;
+            --clr-navy: #00296B;
+            --clr-charcoal: #003566;
+            --clr-body: #334155;
+            --clr-muted: #64748B;
+            --clr-border: #E5DEC9;
+            --clr-offwhite: #FAF6EE;
+            --clr-white: #FFFDF9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: linear-gradient(135deg, var(--clr-offwhite) 0%, #E8F0F7 100%);
+            color: var(--clr-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+        .err__logo { height: 64px; width: auto; margin-bottom: 1.5rem; }
+        .err__badge {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--clr-primary);
+            background: rgba(0, 119, 182, 0.12);
+            border: 1px solid rgba(0, 119, 182, 0.3);
+            border-radius: 999px;
+            padding: 6px 18px;
+            margin-bottom: 1.25rem;
+        }
+        .err__code {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: clamp(4.5rem, 18vw, 9rem);
+            line-height: 1;
+            color: var(--clr-primary);
+            letter-spacing: -2px;
+            margin-bottom: 0.5rem;
+        }
+        .err__title {
+            font-weight: 600;
+            font-size: clamp(1.25rem, 3vw, 1.9rem);
+            color: var(--clr-navy);
+            margin-bottom: 0.75rem;
+        }
+        .err__sub {
+            font-size: 1rem;
+            color: var(--clr-body);
+            max-width: 480px;
+            line-height: 1.8;
+            margin: 0 auto 2rem;
+        }
+        .err__actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 999px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .btn--primary {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+            border-color: var(--clr-primary);
+        }
+        .btn--primary:hover {
+            background: var(--clr-primary-dark);
+            border-color: var(--clr-primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn--secondary {
+            background: transparent;
+            color: var(--clr-primary);
+            border-color: var(--clr-primary);
+        }
+        .btn--secondary:hover {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+            transform: translateY(-2px);
+        }
+        .err__links-label {
+            font-size: 0.8rem;
+            color: var(--clr-muted);
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        .err__links {
+            display: flex;
+            gap: 8px 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .err__links a {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: var(--clr-charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .err__links a:hover { color: var(--clr-primary); }
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            background: rgba(0, 41, 107, 0.06);
+            border: 1px solid rgba(0, 41, 107, 0.15);
+            padding: 3px 6px;
+            border-radius: 999px;
+            margin-top: 2.5rem;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--clr-muted);
+            cursor: pointer;
+            padding: 3px 10px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn.active {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+        }
+        .lang-divider { font-size: 0.7rem; color: rgba(0, 41, 107, 0.3); }
+        html[lang="en"] body { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body>
+    <a href="index.html"><img src="assets/images/logo_icon.png" alt="LA-MI MALATANG" class="err__logo"></a>
+
+    <span class="err__badge" data-i18n="err_404_badge">ERROR 404</span>
+    <div class="err__code">404</div>
+    <h1 class="err__title" data-i18n="err_404_title">ไม่พบหน้าที่คุณกำลังหา</h1>
+    <p class="err__sub" data-i18n="err_404_sub">หน้านี้อาจถูกย้าย เปลี่ยนชื่อ หรือลิงก์อาจพิมพ์ผิด ลองกลับไปหน้าแรกหรือเลือกจากเมนูด้านล่างได้เลย</p>
+
+    <div class="err__actions">
+        <a href="index.html" class="btn btn--primary" data-i18n="err_404_btn_home">กลับหน้าแรก</a>
+        <a href="menu.html" class="btn btn--secondary" data-i18n="err_404_btn_menu">ดูเมนูอาหาร</a>
+    </div>
+
+    <div class="err__links-label" data-i18n="err_404_links">หรือไปที่หน้าอื่น</div>
+    <nav class="err__links">
+        <a href="index.html" data-i18n="nav_home">หน้าแรก</a>
+        <a href="menu.html" data-i18n="nav_menu">เมนูอาหาร</a>
+        <a href="branches.html" data-i18n="nav_branches">ค้นหาสาขา</a>
+        <a href="promotions.html" data-i18n="nav_promotions">โปรโมชั่น</a>
+        <a href="index.html#contact" data-i18n="nav_contact">ติดต่อเรา</a>
+    </nav>
+
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="th">TH</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <script src="assets/js/i18n.js"></script>
+</body>
+</html>

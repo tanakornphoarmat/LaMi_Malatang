@@ -143,6 +143,15 @@ const translations = {
         doc_title_menu: "MENU | LA-MI MALATANG",
         doc_title_branches: "BRANCHES | LA-MI MALATANG",
         doc_title_promotions: "PROMOTIONS | LA-MI MALATANG",
+        doc_title_404: "ไม่พบหน้านี้ | LA-MI MALATANG",
+
+        // 404 Page
+        err_404_badge: "ERROR 404",
+        err_404_title: "ไม่พบหน้าที่คุณกำลังหา",
+        err_404_sub: "หน้านี้อาจถูกย้าย เปลี่ยนชื่อ หรือลิงก์อาจพิมพ์ผิด ลองกลับไปหน้าแรกหรือเลือกจากเมนูด้านล่างได้เลย",
+        err_404_btn_home: "กลับหน้าแรก",
+        err_404_btn_menu: "ดูเมนูอาหาร",
+        err_404_links: "หรือไปที่หน้าอื่น",
         
         insta_title: "FOLLOW LA-MI",
         counter_price_label: "ราคาเริ่มต้น / 100g",
@@ -154,6 +163,9 @@ const translations = {
         branch_pattaya_name: "LA-MI MALATANG PATTAYA",
         branch_aoudom_name: "LA-MI MALATANG AO UDOM",
         branch_aoudom_addr: "อ่าวอุดม ศรีราชา ชลบุรี",
+        branch_huaiyai_name: "LA-MI MALATANG HUAI YAI",
+        branch_huaiyai_addr: "ห้วยใหญ่ บางละมุง ชลบุรี",
+        coming_soon: "เร็วๆ นี้",
         map_pattaya: "La-Mi Malatang สาขาพัทยา",
         map_aoudom: "Lami Malatang สาขาอ่าวอุดม",
 
@@ -329,6 +341,15 @@ const translations = {
         doc_title_menu: "MENU | LA-MI MALATANG",
         doc_title_branches: "BRANCHES | LA-MI MALATANG",
         doc_title_promotions: "PROMOTIONS | LA-MI MALATANG",
+        doc_title_404: "Page Not Found | LA-MI MALATANG",
+
+        // 404 Page
+        err_404_badge: "ERROR 404",
+        err_404_title: "We couldn't find that page",
+        err_404_sub: "The page may have been moved or renamed, or the link was mistyped. Head back home or pick a page below.",
+        err_404_btn_home: "BACK TO HOME",
+        err_404_btn_menu: "VIEW MENU",
+        err_404_links: "Or jump to",
 
         insta_title: "FOLLOW LA-MI",
         counter_price_label: "Starting / 100g",
@@ -340,6 +361,9 @@ const translations = {
         branch_pattaya_name: "LA-MI MALATANG PATTAYA",
         branch_aoudom_name: "LA-MI MALATANG AO UDOM",
         branch_aoudom_addr: "Ao Udom, Si Racha, Chonburi",
+        branch_huaiyai_name: "LA-MI MALATANG HUAI YAI",
+        branch_huaiyai_addr: "Huai Yai, Bang Lamung, Chonburi",
+        coming_soon: "Coming Soon",
         map_pattaya: "La-Mi Malatang Pattaya Branch",
         map_aoudom: "Lami Malatang Ao Udom Branch",
 
