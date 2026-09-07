@@ -1,8 +1,8 @@
-# LA-MI MALATANG — https://tanakornphoarmat.github.io/LaMi_Malatang/
+# LA-MI MALATANG — https://www.la-mi-malatang.com/
 User-agent: *
 Allow: /
 
 # Working files that should not be indexed
 Disallow: /assets/images/raw_archive/
 
-Sitemap: https://tanakornphoarmat.github.io/LaMi_Malatang/sitemap.xml
+Sitemap: https://www.la-mi-malatang.com/sitemap.xml

@@ -139,10 +139,10 @@ const translations = {
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
         
-        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่งอันดับ 1 สไตล์ DIY",
-        doc_title_menu: "MENU | LA-MI MALATANG",
-        doc_title_branches: "BRANCHES | LA-MI MALATANG",
-        doc_title_promotions: "PROMOTIONS | LA-MI MALATANG",
+        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่ง DIY พัทยา-อ่าวอุดม ชลบุรี",
+        doc_title_menu: "เมนูวัตถุดิบ 50+ ชนิด | LA-MI MALATANG หม่าล่าทั่ง",
+        doc_title_branches: "สาขาพัทยา & อ่าวอุดม ชลบุรี | LA-MI MALATANG",
+        doc_title_promotions: "โปรโมชั่นล่าสุด | LA-MI MALATANG หม่าล่าทั่ง",
         doc_title_404: "ไม่พบหน้านี้ | LA-MI MALATANG",
 
         // 404 Page
@@ -337,10 +337,10 @@ const translations = {
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
         
-        doc_title_home: "LA-MI MALATANG | No.1 DIY Malatang Restaurant",
-        doc_title_menu: "MENU | LA-MI MALATANG",
-        doc_title_branches: "BRANCHES | LA-MI MALATANG",
-        doc_title_promotions: "PROMOTIONS | LA-MI MALATANG",
+        doc_title_home: "LA-MI MALATANG | DIY Malatang in Pattaya & Ao Udom, Chonburi",
+        doc_title_menu: "Menu — 50+ Fresh Ingredients | LA-MI MALATANG",
+        doc_title_branches: "Branches in Pattaya & Ao Udom, Chonburi | LA-MI MALATANG",
+        doc_title_promotions: "Latest Promotions | LA-MI MALATANG Malatang",
         doc_title_404: "Page Not Found | LA-MI MALATANG",
 
         // 404 Page

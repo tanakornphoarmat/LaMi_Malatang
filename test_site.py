@@ -4,7 +4,7 @@ import os
 import json
 
 base_url = 'http://localhost:3000'
-pages = ['/', '/index.html', '/menu.html', '/branches.html', '/promotions.html', '/404.html']
+pages = ['/', '/index.html', '/menu/', '/branches/', '/promotions/', '/404.html']
 assets = [
     '/assets/css/styles.css',
     '/assets/js/i18n.js',
@@ -17,6 +17,7 @@ assets = [
     '/assets/images/steps/step4_enjoy.jpg',
     '/assets/images/reviews/review_1.jpg',
     '/assets/images/reviews/review_10.jpg',
+    '/assets/images/branches/branch_huaiyai_coming_soon.jpg',
     '/robots.txt',
     '/sitemap.xml'
 ]
@@ -79,8 +80,8 @@ for h in html_files:
             clean_r = r.split('#')[0]
             if not clean_r:
                 continue
-            ref_path = os.path.normpath(os.path.join('D:/mala', clean_r))
-            if not os.path.exists(ref_path):
+            ref_path = os.path.normpath(os.path.join('D:/mala', clean_r.lstrip('/')))
+            if not (os.path.isfile(ref_path) or os.path.isdir(ref_path)):
                 broken.append(r)
         
         if len(broken) == 0:
@@ -115,12 +116,43 @@ print("\n--- 5. Testing sitemap.xml Coverage ---")
 with open(os.path.join('D:/mala', 'sitemap.xml'), 'r', encoding='utf-8') as f:
     sitemap = f.read()
 url_count = sitemap.count('<loc>')
-missing = [h for h in ['menu/index.html', 'branches/index.html', 'promotions/index.html'] if h not in sitemap]
+missing = [h for h in ['/menu', '/branches', '/promotions'] if '<loc>https://www.la-mi-malatang.com%s</loc>' % h not in sitemap]
 if not missing and '<loc>' in sitemap:
     print(f"  [PASS] sitemap.xml -> {url_count} URLs listed, all pages covered")
     passed += 1
 else:
     print(f"  [FAIL] sitemap.xml -> Missing pages: {missing}")
     failed += 1
+
+
+# 6. Verify per-page SEO tags (canonical / description / Open Graph / single H1)
+print("\n--- 6. Testing SEO Meta Tags ---")
+SEO_PAGES = {
+    'index.html': 'https://www.la-mi-malatang.com/',
+    'menu/index.html': 'https://www.la-mi-malatang.com/menu',
+    'branches/index.html': 'https://www.la-mi-malatang.com/branches',
+    'promotions/index.html': 'https://www.la-mi-malatang.com/promotions',
+}
+for h, canon in SEO_PAGES.items():
+    with open(os.path.join('D:/mala', h), 'r', encoding='utf-8') as f:
+        content = f.read()
+    problems = []
+    if f'<link rel="canonical" href="{canon}">' not in content:
+        problems.append('canonical missing or wrong')
+    if 'name="description"' not in content:
+        problems.append('meta description missing')
+    if 'property="og:image"' not in content:
+        problems.append('og:image missing')
+    h1_count = content.count('<h1')
+    if h1_count != 1:
+        problems.append(f'expected exactly 1 <h1>, found {h1_count}')
+    if 'tanakornphoarmat.github.io' in content:
+        problems.append('stale github.io URL still present')
+    if problems:
+        print(f"  [FAIL] {h} -> " + ", ".join(problems))
+        failed += 1
+    else:
+        print(f"  [PASS] {h} -> canonical, description, OG tags and single H1 present")
+        passed += 1
 
 print(f"\n=== FINAL TEST RESULTS: {passed} PASSED, {failed} FAILED ===")
