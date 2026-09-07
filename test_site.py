@@ -63,7 +63,7 @@ for a in assets:
 
 # 3. Check for broken internal links in HTML files
 print("\n--- 3. Testing HTML Internal Links & References ---")
-html_files = ['index.html', 'menu.html', 'branches.html', 'promotions.html', '404.html']
+html_files = ['index.html', 'menu/index.html', 'branches/index.html', 'promotions/index.html', '404.html']
 for h in html_files:
     path = os.path.join('D:/mala', h)
     if os.path.exists(path):
@@ -92,7 +92,7 @@ for h in html_files:
 
 # 4. Validate Schema.org JSON-LD structured data
 print("\n--- 4. Testing Structured Data (Schema.org / JSON-LD) ---")
-for h in ['index.html', 'branches.html']:
+for h in ['index.html', 'branches/index.html']:
     path = os.path.join('D:/mala', h)
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -115,7 +115,7 @@ print("\n--- 5. Testing sitemap.xml Coverage ---")
 with open(os.path.join('D:/mala', 'sitemap.xml'), 'r', encoding='utf-8') as f:
     sitemap = f.read()
 url_count = sitemap.count('<loc>')
-missing = [h for h in ['menu.html', 'branches.html', 'promotions.html'] if h not in sitemap]
+missing = [h for h in ['menu/index.html', 'branches/index.html', 'promotions/index.html'] if h not in sitemap]
 if not missing and '<loc>' in sitemap:
     print(f"  [PASS] sitemap.xml -> {url_count} URLs listed, all pages covered")
     passed += 1
