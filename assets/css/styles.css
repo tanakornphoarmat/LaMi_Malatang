@@ -1938,5 +1938,36 @@ html[lang="en"] .ingredient-card__name-en {
 .mt-lg { margin-top: var(--space-lg); }
 .hidden { display: none !important; }
 
+/* ---------- IMAGE PROTECTION ---------- */
+/* Deters casual copying: no drag-to-desktop, no long-press save sheet on
+   iOS, no text/image selection. A transparent layer over each card image
+   means a right-click or long-press lands on the overlay, not the <img>. */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ingredient-card__img,
+.branch-card__img,
+.real-review-card,
+.promo-card__img {
+    position: relative;
+}
+.ingredient-card__img::after,
+.branch-card__img::after,
+.real-review-card::after,
+.promo-card__img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
 /* No-scroll class for body when mobile menu is open */
 body.no-scroll { overflow: hidden; }

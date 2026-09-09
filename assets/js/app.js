@@ -301,4 +301,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modal) modal.addEventListener('click', closeModal);
         if (modalClose) modalClose.addEventListener('click', closeModal);
     }
+
+    // ---------- IMAGE PROTECTION ----------
+    // Blocks the right-click menu and drag-and-drop on images. This only
+    // stops casual saving - anything the browser renders can still be
+    // captured with devtools or a screenshot.
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.closest('img, picture, .ingredient-card__img, .branch-card__img, .real-review-card, .promo-card__img')) {
+            e.preventDefault();
+        }
+    });
+    document.addEventListener('dragstart', (e) => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+    });
 });
