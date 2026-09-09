@@ -100,6 +100,7 @@ const translations = {
         cat_veg: "ผักสด",
         cat_seafood: "อาหารทะเล",
         cat_balls: "ลูกชิ้น/เต้าหู้",
+        cat_mushroom: "เห็ด",
         cat_noodles: "เส้น",
         cat_soup: "น้ำซุป",
 
@@ -301,6 +302,7 @@ const translations = {
         cat_veg: "Vegetables",
         cat_seafood: "Seafood",
         cat_balls: "Meatballs & Tofu",
+        cat_mushroom: "Mushrooms",
         cat_noodles: "Noodles",
         cat_soup: "Soup Broths",
 
