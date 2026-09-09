@@ -168,6 +168,9 @@ const translations = {
         coming_soon: "เร็วๆ นี้",
         map_pattaya: "La-Mi Malatang สาขาพัทยา",
         map_aoudom: "Lami Malatang สาขาอ่าวอุดม",
+        map_huaiyai: "La-Mi Malatang สาขาห้วยใหญ่",
+        coming_soon_badge: "(เร็วๆ นี้)",
+        btn_view_map: "ดูแผนที่",
 
         badge_promo: "โปรโมชั่น",
         badge_event: "กิจกรรม",
@@ -366,6 +369,9 @@ const translations = {
         coming_soon: "Coming Soon",
         map_pattaya: "La-Mi Malatang Pattaya Branch",
         map_aoudom: "Lami Malatang Ao Udom Branch",
+        map_huaiyai: "La-Mi Malatang Huai Yai Branch",
+        coming_soon_badge: "(Coming Soon)",
+        btn_view_map: "VIEW MAP",
 
         badge_promo: "Promotion",
         badge_event: "Event",
