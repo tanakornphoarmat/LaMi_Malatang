@@ -93,7 +93,7 @@ const translations = {
         // Menu Page
         menu_page_title_1: "OUR ",
         menu_page_title_accent: "MENU",
-        menu_page_sub: "เลือกวัตถุดิบสดใหม่กว่า 50+ ชนิด ในราคาเพียง 45 บาท / 100 กรัม",
+        menu_page_sub: "เลือกวัตถุดิบสดใหม่กว่า 30 ชนิด ในราคาเพียง 45 บาท / 100 กรัม",
         search_placeholder: "ค้นหาวัตถุดิบ...",
         cat_all: "ทั้งหมด",
         cat_meat: "เนื้อสัตว์",
@@ -141,7 +141,7 @@ const translations = {
         footer_hours: "OPENING HOURS",
         
         doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่ง DIY พัทยา-อ่าวอุดม ชลบุรี",
-        doc_title_menu: "เมนูวัตถุดิบ 50+ ชนิด | LA-MI MALATANG หม่าล่าทั่ง",
+        doc_title_menu: "เมนูวัตถุดิบ 30 ชนิด | LA-MI MALATANG หม่าล่าทั่ง",
         doc_title_branches: "สาขาพัทยา & อ่าวอุดม ชลบุรี | LA-MI MALATANG",
         doc_title_promotions: "โปรโมชั่นล่าสุด | LA-MI MALATANG หม่าล่าทั่ง",
         doc_title_404: "ไม่พบหน้านี้ | LA-MI MALATANG",
@@ -233,7 +233,7 @@ const translations = {
         brand_title_2: " WAY",
         brand_sub: "Because the best Malatang is the bowl you create yourself.",
         brand_f1_title: "PICK YOURS",
-        brand_f1_desc: "Choose from 50+ fresh ingredients freely",
+        brand_f1_desc: "Choose from 30 fresh ingredients freely",
         brand_f2_title: "CRAFT FLAVOR",
         brand_f2_desc: "Select your favorite soup & spice level",
         brand_f3_title: "DELICIOUS",
@@ -295,7 +295,7 @@ const translations = {
         // Menu Page
         menu_page_title_1: "OUR ",
         menu_page_title_accent: "MENU",
-        menu_page_sub: "Choose from 50+ fresh ingredients at only 45 THB / 100g",
+        menu_page_sub: "Choose from 30 fresh ingredients at only 45 THB / 100g",
         search_placeholder: "Search ingredients...",
         cat_all: "All",
         cat_meat: "Meat",
@@ -343,7 +343,7 @@ const translations = {
         footer_hours: "OPENING HOURS",
         
         doc_title_home: "LA-MI MALATANG | DIY Malatang in Pattaya & Ao Udom, Chonburi",
-        doc_title_menu: "Menu — 50+ Fresh Ingredients | LA-MI MALATANG",
+        doc_title_menu: "Menu — 30 Fresh Ingredients | LA-MI MALATANG",
         doc_title_branches: "Branches in Pattaya & Ao Udom, Chonburi | LA-MI MALATANG",
         doc_title_promotions: "Latest Promotions | LA-MI MALATANG Malatang",
         doc_title_404: "Page Not Found | LA-MI MALATANG",
