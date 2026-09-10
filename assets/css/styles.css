@@ -1453,6 +1453,111 @@ html[lang="en"] .ingredient-card__name-en {
     pointer-events: none;
 }
 
+/* ---------- STAGGERED SOUPS ---------- */
+.staggered-soups {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    column-gap: var(--space-md);
+    row-gap: 110px;
+    margin-top: 80px; /* Space for the upward stagger */
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+}
+.staggered-item {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: var(--space-md) var(--space-sm) var(--space-lg);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: var(--transition);
+    /* flex-basis 0 keeps all five on one row so the zigzag never breaks;
+       min-width 0 lets them shrink instead of overflowing. */
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 280px;
+}
+.staggered-item:hover {
+    box-shadow: 0 20px 40px rgba(0, 119, 182, 0.15);
+    border-color: rgba(0, 119, 182, 0.3);
+}
+.staggered-up {
+    transform: translateY(-30px);
+}
+.staggered-down {
+    transform: translateY(30px);
+}
+/* Lift is relative to each card's resting offset, so hovering never
+   drops a raised card down into its neighbour. */
+.staggered-up:hover {
+    transform: translateY(-40px) scale(1.02);
+}
+.staggered-down:hover {
+    transform: translateY(20px) scale(1.02);
+}
+/* The frame carries the shape and clips the image, so the hover
+   scale/rotate stays inside the rounded square. */
+.staggered-img {
+    margin-bottom: var(--space-sm);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #FAFAFA;
+}
+.staggered-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+.staggered-item:hover .staggered-img img {
+    transform: scale(1.1) rotate(5deg);
+}
+.staggered-title {
+    font-size: 1.2rem;
+    color: var(--clr-primary-dark);
+    margin-bottom: 8px;
+    font-family: 'Chonburi', serif;
+}
+.staggered-item p {
+    font-size: 0.95rem;
+    color: var(--clr-text-light);
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .staggered-up, .staggered-down {
+        transform: none !important;
+    }
+    .staggered-soups {
+        margin-top: var(--space-lg);
+        column-gap: var(--space-md);
+        row-gap: var(--space-lg);
+        padding-bottom: var(--space-sm);
+    }
+    .staggered-item {
+        /* Let them wrap again once the zigzag is off. */
+        flex: 0 1 240px;
+        max-width: 240px;
+        padding: var(--space-sm) var(--space-sm) var(--space-md);
+    }
+    .staggered-title {
+        font-size: 1.1rem;
+    }
+    .staggered-item p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .staggered-item {
+        flex: 0 1 100%;
+        max-width: 320px;
+    }
+}
+
 /* ---------- REVIEW CARDS ---------- */
 .review-grid {
     display: grid;
@@ -1545,6 +1650,14 @@ html[lang="en"] .ingredient-card__name-en {
     opacity: 0;
     transition: var(--transition);
     font-size: 1.5rem;
+}
+/* The stamp card is 3:2 artwork, not a photo -- a square cover crop would
+   cut off the logo and the title, so letterbox it against its own blue edge. */
+.insta-item--contain {
+    background: #2CA9E9;
+}
+.insta-item--contain img {
+    object-fit: contain;
 }
 .insta-item:hover img { transform: scale(1.1); }
 .insta-item:hover::after { opacity: 1; }
