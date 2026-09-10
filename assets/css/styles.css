@@ -508,7 +508,7 @@ h1, h2, h3, .font-display {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--clr-offwhite);
+    background: var(--clr-primary);
     overflow: hidden;
 }
 .hero__bg {
@@ -516,23 +516,68 @@ h1, h2, h3, .font-display {
     inset: 0;
     z-index: 0;
 }
+/* The storefront photo is only 408px wide, so it is upscaled hard here.
+   A slight blur reads as depth of field instead of pixelation, and the
+   scale hides the soft edges the blur leaves behind. */
 .hero__bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.14;
+    object-position: center;
+    opacity: 1;
+    filter: blur(3px);
+    transform: scale(1.06);
 }
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(250, 246, 238, 0.96) 0%,
-        rgba(247, 242, 231, 0.90) 40%,
-        rgba(232, 240, 247, 0.82) 70%,
-        rgba(219, 236, 246, 0.75) 100%
-    );
+    /* A wash of the brand blue (#0077B6, the MALA YOUR WAY heading colour)
+       over the photo, then a navy fade on the left only -- white copy needs
+       7:1 there, which flat #0077B6 cannot give on its own. */
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 4, 94, 0.50) 0%,
+            rgba(3, 4, 94, 0.15) 50%,
+            rgba(3, 4, 94, 0) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0, 119, 182, 0.72) 0%,
+            rgba(0, 119, 182, 0.58) 45%,
+            rgba(0, 119, 182, 0.70) 100%
+        );
     z-index: 1;
+}
+
+/* The transparent header sits on the dark hero on the homepage only, so its
+   dark type has to flip to light there. Sub-pages open on the light
+   .page-hero and keep the default, and the scrolled white bar keeps it too.
+   The burger is excluded while active because it then sits over the light
+   mobile panel. */
+body:has(.hero) .header:not(.scrolled) .nav__link {
+    color: rgba(255, 253, 249, 0.92);
+}
+body:has(.hero) .header:not(.scrolled) .nav__link:hover {
+    color: var(--clr-gold);
+}
+body:has(.hero) .header:not(.scrolled) .header__logo-text {
+    color: var(--clr-white);
+}
+body:has(.hero) .header:not(.scrolled) .header__logo img {
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
+}
+body:has(.hero) .header:not(.scrolled) .lang-btn {
+    color: rgba(255, 253, 249, 0.72);
+}
+body:has(.hero) .header:not(.scrolled) .lang-btn:hover {
+    color: var(--clr-gold);
+}
+body:has(.hero) .header:not(.scrolled) .lang-divider {
+    color: rgba(255, 255, 255, 0.35);
+}
+body:has(.hero) .header:not(.scrolled) .nav__toggle:not(.active) span {
+    background: var(--clr-white);
 }
 .hero__content {
     position: relative;
@@ -548,7 +593,13 @@ h1, h2, h3, .font-display {
     padding-top: var(--header-height);
 }
 .hero__text {
-    color: var(--clr-black);
+    color: var(--clr-white);
+}
+.hero .badge--primary {
+    background: rgba(255, 255, 255, 0.18);
+    color: var(--clr-white);
+    border-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
 }
 .hero__text .badge {
     margin-bottom: var(--space-md);
@@ -561,14 +612,17 @@ h1, h2, h3, .font-display {
     line-height: 1.2;
 }
 .hero__text h1 span {
-    color: var(--clr-black);
+    color: var(--clr-white);
+    text-shadow: 0 2px 18px rgba(0, 20, 60, 0.55);
 }
+/* Blue-on-blue is invisible, so the accent word goes gold -- 3.3:1 against
+   the wash, which clears AA for text this size. */
 .hero__text h1 span.text-primary {
-    color: var(--clr-primary);
+    color: var(--clr-gold);
 }
 .hero__subtitle {
     font-size: var(--fs-body);
-    color: var(--clr-body);
+    color: rgba(255, 253, 249, 0.85);
     margin-bottom: var(--space-sm);
     max-width: 500px;
     animation: fadeInUp 0.6s var(--ease) 0.6s both;
@@ -611,10 +665,10 @@ h1, h2, h3, .font-display {
     align-items: center;
     gap: 6px;
     font-size: var(--fs-small);
-    color: var(--clr-muted);
+    color: rgba(255, 253, 249, 0.78);
     transition: var(--transition);
 }
-.hero__contact a:hover { color: var(--clr-primary); }
+.hero__contact a:hover { color: var(--clr-gold); }
 
 .hero__visual {
     position: relative;
@@ -626,7 +680,7 @@ h1, h2, h3, .font-display {
 .hero__visual img {
     max-width: 100%;
     border-radius: var(--radius-lg);
-    filter: drop-shadow(0 20px 50px rgba(0, 41, 107, 0.22));
+    filter: drop-shadow(0 24px 60px rgba(0, 10, 40, 0.65));
 }
 /* Floating spice decorations */
 .hero__float {
@@ -636,13 +690,12 @@ h1, h2, h3, .font-display {
 .hero__float:nth-child(2) { animation-delay: -1s; }
 .hero__float:nth-child(3) { animation-delay: -2s; }
 
-/* Outline button on the light cream hero */
-.hero .btn--outline-white,
+/* Outline button on the light cream sub-page hero. The main hero is dark
+   now, so it keeps the plain white outline. */
 .page-hero .btn--outline-white {
     color: var(--clr-primary);
     border-color: rgba(0, 119, 182, 0.5);
 }
-.hero .btn--outline-white:hover,
 .page-hero .btn--outline-white:hover {
     background: var(--clr-primary);
     color: var(--clr-white);
@@ -1624,7 +1677,7 @@ html[lang="en"] .ingredient-card__name-en {
 /* ---------- INSTAGRAM GRID ---------- */
 .insta-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 4px;
 }
 .insta-item {
@@ -1650,14 +1703,6 @@ html[lang="en"] .ingredient-card__name-en {
     opacity: 0;
     transition: var(--transition);
     font-size: 1.5rem;
-}
-/* The stamp card is 3:2 artwork, not a photo -- a square cover crop would
-   cut off the logo and the title, so letterbox it against its own blue edge. */
-.insta-item--contain {
-    background: #2CA9E9;
-}
-.insta-item--contain img {
-    object-fit: contain;
 }
 .insta-item:hover img { transform: scale(1.1); }
 .insta-item:hover::after { opacity: 1; }
