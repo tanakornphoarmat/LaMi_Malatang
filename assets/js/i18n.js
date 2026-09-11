@@ -76,7 +76,7 @@ const translations = {
         // About
         about_label: "ABOUT US",
         about_title: "ABOUT LA-MI",
-        about_desc: "LA-MI MALATANG คือร้านหม่าล่าที่อยากให้ทุกคนสนุกกับการเลือกอาหารในแบบของตัวเอง ตั้งแต่วัตถุดิบ รสชาติ ไปจนถึงน้ำจิ้ม",
+        about_desc: "LA-MI MALATANG คือร้านหม่าล่าทั่ง DIY ที่ให้คุณเลือกวัตถุดิบเองได้ทุกอย่าง ตั้งแต่เนื้อสัตว์ ลูกชิ้น ผักสด ไปจนถึงน้ำซุปและน้ำจิ้ม เราเป็นร้านหม่าล่าทั่ง ชลบุรี ที่เปิดให้บริการแล้วทั้งสาขาพัทยาและสาขาอ่าวอุดม และกำลังจะเปิดสาขาห้วยใหญ่เร็วๆ นี้",
         counter_branches: "สาขา",
         counter_items: "ชนิดวัตถุดิบ",
         counter_soups: "สูตรน้ำซุป",
@@ -93,7 +93,7 @@ const translations = {
         // Menu Page
         menu_page_title_1: "OUR ",
         menu_page_title_accent: "MENU",
-        menu_page_sub: "เลือกวัตถุดิบสดใหม่กว่า 60+ ชนิด ในราคาเพียง 45 บาท / 100 กรัม",
+        menu_page_sub: "หม่าล่าทั่งเลือกวัตถุดิบเองกว่า 60 ชนิด พร้อมน้ำซุป 5 สูตร ราคา 45 บาท / 100 กรัม",
         search_placeholder: "ค้นหาวัตถุดิบ...",
         cat_all: "ทั้งหมด",
         cat_meat: "เนื้อสัตว์",
@@ -107,7 +107,7 @@ const translations = {
         // Branches Page
         branch_page_title_1: "FIND YOUR ",
         branch_page_title_accent: "LA-MI",
-        branch_page_sub: "เลือกสาขาที่ใกล้คุณ",
+        branch_page_sub: "หาร้านหม่าล่าใกล้ฉัน — เลือกสาขา LA-MI MALATANG ร้านหม่าล่าทั่งใกล้ฉันที่สุดในชลบุรี",
         prov_all: "ทุกจังหวัด",
         prov_chonburi: "ชลบุรี",
         dist_all: "ทุกเขต/อำเภอ",
@@ -130,7 +130,7 @@ const translations = {
         tab_promo: "โปรโมชั่น",
         tab_news: "ข่าวสาร",
         tab_event: "กิจกรรม",
-        promo_follow_title: "ไม่พลาดทุกโปรโมชั่น",
+        promo_follow_title: "ไม่พลาดทุกโปรโมชั่นหม่าล่าทั่ง",
         promo_follow_sub: "ติดตามข่าวสารและโปรโมชั่นล่าสุดจาก LA-MI MALATANG",
         btn_follow_fb: "ติดตามเราบน FACEBOOK",
 
@@ -140,10 +140,10 @@ const translations = {
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
         
-        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่ง DIY พัทยา-อ่าวอุดม ชลบุรี",
-        doc_title_menu: "เมนูวัตถุดิบ 60+ ชนิด | LA-MI MALATANG หม่าล่าทั่ง",
-        doc_title_branches: "สาขาพัทยา & อ่าวอุดม ชลบุรี | LA-MI MALATANG",
-        doc_title_promotions: "โปรโมชั่นล่าสุด | LA-MI MALATANG หม่าล่าทั่ง",
+        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่ง DIY พัทยา อ่าวอุดม ห้วยใหญ่ ชลบุรี",
+        doc_title_menu: "เมนูหม่าล่าทั่ง เลือกวัตถุดิบเอง 60+ ชนิด และน้ำซุป 5 สูตร | LA-MI MALATANG",
+        doc_title_branches: "สาขาพัทยา อ่าวอุดม ห้วยใหญ่ ชลบุรี | LA-MI MALATANG ร้านหม่าล่าทั่ง DIY",
+        doc_title_promotions: "โปรโมชั่นหม่าล่าทั่ง LA-MI MALATANG พัทยา อ่าวอุดม ห้วยใหญ่",
         doc_title_404: "ไม่พบหน้านี้ | LA-MI MALATANG",
 
         // 404 Page
@@ -202,6 +202,39 @@ const translations = {
         
         calc_note: "ราคาประเมินอาจมีความคลาดเคลื่อนเล็กน้อย ขึ้นอยู่กับน้ำหนักจริงหน้าร้าน",
         footer_brand_desc: "ร้านหม่าล่าทั่งสไตล์ DIY ตักเอง คัดสรรวัตถุดิบสดใหม่ อร่อย สะอาด ทุกวัน",
+
+        hero_h1_kicker: "ร้านหม่าล่าทั่ง DIY พัทยา · อ่าวอุดม · ห้วยใหญ่ ชลบุรี",
+        // Branch detail pages
+        br_more: "ดูรายละเอียดสาขา →",
+        br_addr_title: "ที่อยู่",
+        br_fact_soups: "น้ำซุปให้เลือก 5 สูตร — ซุปหม่าล่า ซุปกระดูกหมู ซุปน้ำดำ ซุปมะเขือเทศ และหม่าล่าผัดแห้ง",
+        br_fact_price: "คิดราคาตามน้ำหนัก 45 บาท ต่อ 100 กรัม จะเลือกมากหรือน้อยก็ได้",
+        br_fact_sauce: "บาร์น้ำจิ้มปรุงเองได้ตามใจ ทั้งซอสงา น้ำมันพริก และกระเทียมเจียว",
+        br_fact_menu: "ดูวัตถุดิบทั้งหมดกว่า 60 ชนิดได้ที่ <a href=\"/menu\">หน้าเมนู</a>",
+        br_pattaya_seo_h2: "หม่าล่าทั่ง พัทยา สไตล์เลือกวัตถุดิบเอง",
+        br_pattaya_seo_body: "ถ้ากำลังมองหาร้านหม่าล่า พัทยา ที่ได้เลือกของเอง LA-MI MALATANG สาขาพัทยา อยู่ใน Little Walk Pattaya อำเภอบางละมุง เดินเข้ามาหยิบตะกร้าแล้วเลือกวัตถุดิบจากตู้แช่ได้เลย ทั้งเนื้อวัวสไลซ์ หมูสไลซ์ ลูกชิ้น อาหารทะเล ผักสด เต้าหู้ และเส้นหลายแบบ จากนั้นเลือกน้ำซุปที่ชอบ แล้วนำไปชั่งน้ำหนักคิดราคา",
+        br_aoudom_seo_h2: "หม่าล่าทั่ง อ่าวอุดม สไตล์เลือกวัตถุดิบเอง",
+        br_aoudom_seo_body: "ร้านหม่าล่า อ่าวอุดม ที่ให้คุณคุมทุกอย่างเอง LA-MI MALATANG สาขาอ่าวอุดม อำเภอศรีราชา เป็นอีกทางเลือกของคนหาร้านหม่าล่า ชลบุรี ที่ไม่ต้องสั่งเป็นเซ็ต หยิบตะกร้าเลือกวัตถุดิบที่ชอบจากตู้แช่ ทั้งเนื้อวัวสไลซ์ หมูสไลซ์ ลูกชิ้น อาหารทะเล ผักสด เต้าหู้ และเส้น แล้วเลือกน้ำซุปก่อนนำไปชั่งน้ำหนัก",
+        br_huaiyai_seo_h2: "หม่าล่าทั่งเปิดใหม่ ที่ห้วยใหญ่ บางละมุง",
+        br_huaiyai_seo_body: "ใครที่มองหาหม่าล่าทั่ง ห้วยใหญ่ ร้านหม่าล่า ห้วยใหญ่ หรือร้านหม่าล่าใกล้ห้วยใหญ่ LA-MI MALATANG กำลังจะเปิดสาขาใหม่ที่ตำบลห้วยใหญ่ อำเภอบางละมุง ชลบุรี รูปแบบเดียวกับสาขาพัทยาและสาขาอ่าวอุดม คือเลือกวัตถุดิบเองจากตู้แช่ เลือกน้ำซุปเอง แล้วชั่งน้ำหนักคิดราคา ระหว่างนี้ดูตำแหน่งร้านได้จากแผนที่ด้านล่าง และติดตามวันเปิดได้ทาง Facebook Page",
+        br_phone_title: "เบอร์โทร",
+        br_map_title: "แผนที่และเส้นทาง",
+        br_other_title: "สาขาอื่นของเรา",
+        br_pattaya_name: "สาขาพัทยา",
+        br_pattaya_h1: "ร้านหม่าล่าทั่ง DIY พัทยา",
+        br_pattaya_addr: "8/111-117 Little Walk Pattaya อำเภอบางละมุง ชลบุรี 20150",
+        br_pattaya_intro: "LA-MI MALATANG สาขาพัทยา ตั้งอยู่ใน Little Walk Pattaya อำเภอบางละมุง จังหวัดชลบุรี เป็นร้านหม่าล่าทั่งสไตล์ DIY ที่ให้คุณเลือกวัตถุดิบเองจากกว่า 60 ชนิด เลือกน้ำซุปได้ 5 สูตร แล้วชั่งน้ำหนักคิดราคา 45 บาทต่อ 100 กรัม พร้อมบาร์น้ำจิ้มให้ปรุงรสเองตามใจชอบ",
+        doc_title_br_pattaya: "ร้านหม่าล่าทั่ง DIY พัทยา (Little Walk) | LA-MI MALATANG สาขาพัทยา",
+        br_aoudom_name: "สาขาอ่าวอุดม",
+        br_aoudom_h1: "ร้านหม่าล่าทั่ง DIY อ่าวอุดม",
+        br_aoudom_addr: "อ่าวอุดม อำเภอศรีราชา ชลบุรี",
+        br_aoudom_intro: "LA-MI MALATANG สาขาอ่าวอุดม ตั้งอยู่ที่อ่าวอุดม อำเภอศรีราชา จังหวัดชลบุรี เป็นร้านหม่าล่าทั่งสไตล์ DIY ที่ให้คุณเลือกวัตถุดิบเองจากกว่า 60 ชนิด เลือกน้ำซุปได้ 5 สูตร แล้วชั่งน้ำหนักคิดราคา 45 บาทต่อ 100 กรัม พร้อมบาร์น้ำจิ้มให้ปรุงรสเองตามใจชอบ",
+        doc_title_br_aoudom: "ร้านหม่าล่าทั่ง DIY อ่าวอุดม ศรีราชา | LA-MI MALATANG สาขาอ่าวอุดม",
+        br_huaiyai_name: "สาขาห้วยใหญ่",
+        br_huaiyai_h1: "ร้านหม่าล่าทั่ง DIY ห้วยใหญ่",
+        br_huaiyai_addr: "ห้วยใหญ่ อำเภอบางละมุง ชลบุรี",
+        br_huaiyai_intro: "LA-MI MALATANG สาขาห้วยใหญ่ อำเภอบางละมุง จังหวัดชลบุรี กำลังจะเปิดให้บริการเร็วๆ นี้ เป็นร้านหม่าล่าทั่งสไตล์ DIY เลือกวัตถุดิบเองกว่า 60 ชนิด เลือกน้ำซุปได้ 5 สูตร ชั่งน้ำหนักคิดราคา 45 บาทต่อ 100 กรัม เช่นเดียวกับสาขาพัทยาและสาขาอ่าวอุดม",
+        doc_title_br_huaiyai: "ร้านหม่าล่าทั่ง DIY ห้วยใหญ่ (เร็วๆ นี้) | LA-MI MALATANG สาขาห้วยใหญ่",
         footer_copy: "© 2026 LA-MI MALATANG. All Rights Reserved."
     },
 
@@ -278,7 +311,7 @@ const translations = {
         // About
         about_label: "ABOUT US",
         about_title: "ABOUT LA-MI",
-        about_desc: "LA-MI MALATANG is a DIY Malatang concept store designed to bring fun, choice, and authentic flavors to everyone.",
+        about_desc: "LA-MI MALATANG is a DIY malatang shop where you pick every ingredient yourself — meat, meatballs, fresh vegetables, your soup base and your dipping sauce. Open in Pattaya and Ao Udom, with a Huai Yai branch in Chon Buri opening soon.",
         counter_branches: "Branches",
         counter_items: "Ingredients",
         counter_soups: "Soup Recipes",
@@ -295,7 +328,7 @@ const translations = {
         // Menu Page
         menu_page_title_1: "OUR ",
         menu_page_title_accent: "MENU",
-        menu_page_sub: "Choose from 60+ fresh ingredients at only 45 THB / 100g",
+        menu_page_sub: "Pick from 60+ fresh ingredients and 5 soup bases at only 45 THB / 100g",
         search_placeholder: "Search ingredients...",
         cat_all: "All",
         cat_meat: "Meat",
@@ -309,7 +342,7 @@ const translations = {
         // Branches Page
         branch_page_title_1: "FIND YOUR ",
         branch_page_title_accent: "LA-MI",
-        branch_page_sub: "Locate a store near you",
+        branch_page_sub: "Find the LA-MI MALATANG branch nearest you in Chon Buri",
         prov_all: "All Provinces",
         prov_chonburi: "Chonburi",
         dist_all: "All Districts",
@@ -342,9 +375,9 @@ const translations = {
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
         
-        doc_title_home: "LA-MI MALATANG | DIY Malatang in Pattaya & Ao Udom, Chonburi",
-        doc_title_menu: "Menu — 60+ Fresh Ingredients | LA-MI MALATANG",
-        doc_title_branches: "Branches in Pattaya & Ao Udom, Chonburi | LA-MI MALATANG",
+        doc_title_home: "LA-MI MALATANG | DIY Malatang in Pattaya, Ao Udom & Huai Yai, Chonburi",
+        doc_title_menu: "Menu — 60+ Ingredients & 5 Soup Bases | LA-MI MALATANG",
+        doc_title_branches: "Branches in Pattaya, Ao Udom & Huai Yai, Chonburi | LA-MI MALATANG",
         doc_title_promotions: "Latest Promotions | LA-MI MALATANG Malatang",
         doc_title_404: "Page Not Found | LA-MI MALATANG",
 
@@ -404,6 +437,29 @@ const translations = {
         
         calc_note: "Estimated price may vary slightly depending on actual scale weight at store",
         footer_brand_desc: "Authentic DIY Malatang chain store serving fresh daily ingredients.",
+
+        hero_h1_kicker: "DIY Malatang · Pattaya · Ao Udom · Huai Yai, Chonburi",
+        // Branch detail pages
+        br_more: "Branch details →",
+        br_addr_title: "Address",
+        br_phone_title: "Phone",
+        br_map_title: "Map & Directions",
+        br_other_title: "Our Other Branches",
+        br_pattaya_name: "Pattaya Branch",
+        br_pattaya_h1: "DIY Malatang in Pattaya",
+        br_pattaya_addr: "8/111-117 Little Walk Pattaya, Bang Lamung, Chon Buri 20150",
+        br_pattaya_intro: "LA-MI MALATANG Pattaya is inside Little Walk Pattaya in Bang Lamung, Chon Buri. Pick your own ingredients from over 60 kinds, choose one of 5 soup bases, then pay 45 THB per 100g by weight. A self-serve sauce bar lets you mix your own dip.",
+        doc_title_br_pattaya: "DIY Malatang in Pattaya (Little Walk) | LA-MI MALATANG",
+        br_aoudom_name: "Ao Udom Branch",
+        br_aoudom_h1: "DIY Malatang in Ao Udom",
+        br_aoudom_addr: "Ao Udom, Si Racha, Chon Buri",
+        br_aoudom_intro: "LA-MI MALATANG Ao Udom is in Si Racha, Chon Buri. Pick your own ingredients from over 60 kinds, choose one of 5 soup bases, then pay 45 THB per 100g by weight. A self-serve sauce bar lets you mix your own dip.",
+        doc_title_br_aoudom: "DIY Malatang in Ao Udom, Si Racha | LA-MI MALATANG",
+        br_huaiyai_name: "Huai Yai Branch",
+        br_huaiyai_h1: "DIY Malatang in Huai Yai",
+        br_huaiyai_addr: "Huai Yai, Bang Lamung, Chon Buri",
+        br_huaiyai_intro: "LA-MI MALATANG Huai Yai in Bang Lamung, Chon Buri is opening soon. The same DIY malatang as our Pattaya and Ao Udom branches: over 60 ingredients, 5 soup bases, 45 THB per 100g by weight.",
+        doc_title_br_huaiyai: "DIY Malatang in Huai Yai (Opening Soon) | LA-MI MALATANG",
         footer_copy: "© 2026 LA-MI MALATANG. All Rights Reserved."
     }
 };

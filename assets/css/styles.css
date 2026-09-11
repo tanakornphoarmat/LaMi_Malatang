@@ -602,8 +602,20 @@ body:has(.hero) .header:not(.scrolled) .nav__toggle:not(.active) span {
     backdrop-filter: blur(8px);
 }
 .hero__text .badge {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
     animation: fadeInUp 0.6s var(--ease) 0.2s both;
+}
+/* Keyword line inside the H1 -- the heading has to name the business and
+   the towns, but the display line stays the one that was designed. */
+.hero__h1-kicker {
+    display: block;
+    font-family: var(--ff-thai);
+    font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: rgba(255, 253, 249, 0.85);
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0, 20, 60, 0.5);
 }
 .hero__text h1 {
     font-size: var(--fs-hero);
@@ -611,7 +623,7 @@ body:has(.hero) .header:not(.scrolled) .nav__toggle:not(.active) span {
     animation: fadeInUp 0.6s var(--ease) 0.4s both;
     line-height: 1.2;
 }
-.hero__text h1 span {
+.hero__text h1 span:not(.hero__h1-kicker) {
     color: var(--clr-white);
     text-shadow: 0 2px 18px rgba(0, 20, 60, 0.55);
 }
@@ -1280,6 +1292,151 @@ html[lang="en"] .ingredient-card__name-en {
     font-weight: 500;
 }
 .section--dark .counter__label { color: rgba(255,255,255,0.6); }
+
+/* ---------- BRANCH DETAIL PAGES ---------- */
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--ff-en);
+    font-size: var(--fs-xs);
+    letter-spacing: 1px;
+    color: var(--clr-muted);
+    margin-bottom: var(--space-sm);
+}
+.breadcrumb a:hover { color: var(--clr-primary); }
+.breadcrumb [aria-current="page"] { color: var(--clr-primary); font-weight: 700; }
+
+.branch-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+.branch-detail__media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+.branch-detail__intro {
+    font-size: 1.05rem;
+    color: var(--clr-body);
+    margin-bottom: var(--space-lg);
+}
+.branch-detail__block {
+    padding: var(--space-sm) 0;
+    border-top: 1px solid var(--clr-border);
+}
+.branch-detail__block h2 {
+    font-size: 1.1rem;
+    font-family: var(--ff-thai);
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+    margin-bottom: 6px;
+}
+.branch-detail__block a:hover { color: var(--clr-primary); }
+.branch-detail__row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: 3px 0;
+    color: var(--clr-body);
+}
+.branch-detail__soon {
+    display: inline-block;
+    background: var(--clr-light);
+    color: var(--clr-primary);
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: var(--radius-full);
+}
+.branch-detail__actions { margin-top: var(--space-lg); }
+
+.branch-card__more {
+    display: inline-block;
+    font-family: var(--ff-thai);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    color: var(--clr-primary);
+    margin-bottom: var(--space-sm);
+}
+.branch-card__more:hover { color: var(--clr-primary-dark); }
+
+.branch-copy {
+    max-width: 780px;
+    margin: 0 auto;
+}
+.branch-copy h2 {
+    font-size: var(--fs-h3);
+    color: var(--clr-primary-dark);
+    margin-bottom: var(--space-sm);
+}
+.branch-copy p {
+    color: var(--clr-body);
+    margin-bottom: var(--space-md);
+}
+.branch-copy__facts {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+.branch-copy__facts li {
+    position: relative;
+    padding-left: 26px;
+    color: var(--clr-body);
+}
+.branch-copy__facts li::before {
+    content: '¹3';
+    position: absolute;
+    left: 0;
+    color: var(--clr-primary);
+    font-weight: 700;
+}
+.branch-copy__facts a {
+    color: var(--clr-primary);
+    font-weight: 700;
+}
+.branch-copy__facts a:hover { text-decoration: underline; }
+.branch-card__name a:hover { color: var(--clr-primary); }
+
+.branch-detail__others {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+    max-width: 760px;
+    margin: 0 auto;
+}
+.branch-detail__other {
+    display: block;
+    text-align: center;
+    transition: var(--transition);
+}
+.branch-detail__other img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-xs);
+}
+.branch-detail__other span {
+    font-family: var(--ff-thai);
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+}
+.branch-detail__other:hover { transform: translateY(-4px); }
+.branch-detail__other:hover span { color: var(--clr-primary); }
+
+@media (max-width: 860px) {
+    .branch-detail { grid-template-columns: 1fr; gap: var(--space-lg); }
+    .branch-detail__others { grid-template-columns: 1fr; max-width: 420px; }
+}
 
 /* ---------- BRANCH CARDS ---------- */
 .branch-grid {
