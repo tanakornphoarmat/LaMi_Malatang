@@ -743,18 +743,22 @@ body:has(.hero) .header:not(.scrolled) .nav__toggle:not(.active) span {
     text-align: center;
     padding: var(--space-lg);
 }
+/* The icons are now illustrations that carry their own blue disc and
+   shading, so the wrapper drops the gradient and the shadow it used to
+   draw behind an emoji. */
 .brand-feature__icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+    width: 88px;
+    height: 88px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--space-sm);
-    font-size: 1.8rem;
-    color: var(--clr-white);
-    box-shadow: var(--shadow-red);
+}
+.brand-feature__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 .brand-feature h3 {
     font-family: var(--ff-en);
@@ -2259,7 +2263,7 @@ html[lang="en"] .ingredient-card__name-en {
         align-items: center; 
         padding: var(--space-sm); 
     }
-    .brand-feature__icon { margin: 0; width: 56px; height: 56px; flex-shrink: 0; }
+    .brand-feature__icon { margin: 0; width: 64px; height: 64px; flex-shrink: 0; }
 
     .order-keywords { gap: var(--space-md); }
     .order-keyword + .order-keyword::before { display: none; }
