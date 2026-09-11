@@ -200,6 +200,7 @@ const translations = {
         footer_follow: "FOLLOW US",
         footer_fb_page: "Facebook Page",
         footer_line: "LINE @611isukq",
+        footer_line_scan: "สแกนเพื่อแอดไลน์",
         
         calc_note: "ราคาประเมินอาจมีความคลาดเคลื่อนเล็กน้อย ขึ้นอยู่กับน้ำหนักจริงหน้าร้าน",
         footer_brand_desc: "ร้านหม่าล่าทั่งสไตล์ DIY ตักเอง คัดสรรวัตถุดิบสดใหม่ อร่อย สะอาด ทุกวัน",
@@ -436,6 +437,7 @@ const translations = {
         footer_follow: "FOLLOW US",
         footer_fb_page: "Facebook Page",
         footer_line: "LINE @611isukq",
+        footer_line_scan: "Scan to add us on LINE",
         
         calc_note: "Estimated price may vary slightly depending on actual scale weight at store",
         footer_brand_desc: "Authentic DIY Malatang chain store serving fresh daily ingredients.",

@@ -1963,6 +1963,34 @@ html[lang="en"] .ingredient-card__name-en {
     color: var(--clr-white);
     padding-left: 4px;
 }
+/* LINE QR sits on a white card: the footer is navy and a QR only scans
+   against a light ground with a quiet zone around it. 160px is the
+   smallest size the code still decoded at in testing. */
+.footer__qr {
+    margin-top: 14px;
+}
+.footer__qr a {
+    display: inline-block;
+    background: #fff;
+    padding: 8px;
+    border-radius: var(--radius-md);
+    line-height: 0;
+}
+.footer__qr a:hover {
+    padding-left: 8px;
+}
+.footer__qr img {
+    display: block;
+    width: 160px;
+    height: 160px;
+}
+.footer__qr span {
+    display: block;
+    margin-top: 8px;
+    font-size: var(--fs-xs);
+    color: rgba(255, 255, 255, 0.55);
+}
+
 .footer__bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: var(--space-md);
