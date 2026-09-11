@@ -102,6 +102,9 @@ const translations = {
         cat_balls: "ลูกชิ้น/เต้าหู้",
         cat_mushroom: "เห็ด",
         cat_noodles: "เส้น",
+        cat_ricedish: "อาหารจานด่วน",
+        unit_baht: "บาท",
+        with_rice: "พร้อมข้าวสวย 1 ถ้วย",
         cat_soup: "น้ำซุป",
 
         // Branches Page
@@ -339,6 +342,9 @@ const translations = {
         cat_balls: "Meatballs & Tofu",
         cat_mushroom: "Mushrooms",
         cat_noodles: "Noodles",
+        cat_ricedish: "Fast Dishes",
+        unit_baht: "THB",
+        with_rice: "served with a bowl of rice",
         cat_soup: "Soup Broths",
 
         // Branches Page
