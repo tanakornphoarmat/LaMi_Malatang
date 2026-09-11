@@ -1283,8 +1283,15 @@ html[lang="en"] .ingredient-card__name-en {
     transform: translateX(4px);
 }
 .sauce-item__icon {
-    font-size: 1.3rem;
+    width: 34px;
+    height: 34px;
     flex-shrink: 0;
+}
+.sauce-item__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 .sauce-item span {
     font-size: var(--fs-small);
