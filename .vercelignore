@@ -1,0 +1,3 @@
+# Working files — sources and originals, not served by the site.
+# Keeps ~200 MB out of every deploy; they stay in git.
+assets/images/_source

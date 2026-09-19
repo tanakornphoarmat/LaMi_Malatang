@@ -2,7 +2,8 @@
 User-agent: *
 Allow: /
 
-# Working files that should not be indexed
-Disallow: /assets/images/raw_archive/
+# Working files that should not be indexed (and are not deployed either;
+# see .vercelignore)
+Disallow: /assets/images/_source/
 
 Sitemap: https://www.la-mi-malatang.com/sitemap.xml
