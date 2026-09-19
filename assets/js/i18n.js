@@ -143,7 +143,7 @@ const translations = {
         footer_info: "INFORMATION",
         footer_hours: "OPENING HOURS",
         
-        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่ง DIY พัทยา อ่าวอุดม ห้วยใหญ่ ชลบุรี",
+        doc_title_home: "LA-MI MALATANG | ร้านหม่าล่าทั่ง DIY พัทยา - อ่าวอุดม - ห้วยใหญ่ ชลบุรี",
         doc_title_menu: "เมนูหม่าล่าทั่ง เลือกวัตถุดิบเอง 60+ ชนิด และน้ำซุป 5 สูตร | LA-MI MALATANG",
         doc_title_branches: "สาขาพัทยา อ่าวอุดม ห้วยใหญ่ ชลบุรี | LA-MI MALATANG ร้านหม่าล่าทั่ง DIY",
         doc_title_promotions: "โปรโมชั่นหม่าล่าทั่ง LA-MI MALATANG พัทยา อ่าวอุดม ห้วยใหญ่",
