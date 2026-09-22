@@ -124,11 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (calcSlider) {
         const updateCalculator = (weight) => {
             const price = (weight / 100) * PRICE_PER_100G;
-            if (calcWeight) {
-                calcWeight.innerHTML = `${weight}<span> g</span>`;
+            // Only the numbers change — the units carry data-i18n and follow the language toggle
+            const weightNum = document.getElementById('calcWeightNum');
+            const priceNum = document.getElementById('calcPriceNum');
+            if (weightNum) {
+                weightNum.textContent = weight;
             }
-            if (calcPrice) {
-                calcPrice.innerHTML = `฿${price.toFixed(0)} <span>THB</span>`;
+            if (priceNum) {
+                priceNum.textContent = price.toFixed(0);
             }
             // Update slider track
             const percent = ((weight - 100) / (1000 - 100)) * 100;

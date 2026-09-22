@@ -1108,10 +1108,11 @@ html[lang="en"] .ingredient-card__name-en {
     color: var(--clr-charcoal);
     line-height: 1;
 }
-.calculator__weight span {
+.calculator__weight .calculator__unit {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--clr-muted);
+    margin-left: 0.25em;
 }
 .calculator__price {
     font-family: var(--ff-en);
@@ -1120,9 +1121,10 @@ html[lang="en"] .ingredient-card__name-en {
     color: var(--clr-primary);
     margin-top: var(--space-xs);
 }
-.calculator__price span {
+.calculator__price .calculator__unit {
     font-size: 1rem;
     font-weight: 500;
+    margin-left: 0.3em;
 }
 /* Slider */
 .calculator__slider {
