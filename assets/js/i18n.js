@@ -264,7 +264,8 @@ const translations = {
         footer_tagline: "อร่อย สะอาด สดใหม่ทุกวัน",
         calc_note: "ราคานี้เป็นการคำนวณเบื้องต้น ราคาและเงื่อนไขอาจเปลี่ยนแปลงตามสาขา",
         phone_main: "087-495-5835 (คุณญ่า)",
-        phone_huaiyai: "098-894-9615 (คุณแพรว)"
+        phone_huaiyai: "098-894-9615 (คุณแพรว)",
+        br_fb_title: "Facebook"
     },
 
     en: {
@@ -528,7 +529,8 @@ const translations = {
         footer_tagline: "Tasty, clean and fresh every day",
         calc_note: "This is an estimate — prices and conditions may vary by branch",
         phone_main: "087-495-5835 (Khun Ya)",
-        phone_huaiyai: "098-894-9615 (Khun Praew)"
+        phone_huaiyai: "098-894-9615 (Khun Praew)",
+        br_fb_title: "Facebook"
     }
 };
 
