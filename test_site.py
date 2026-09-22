@@ -77,7 +77,7 @@ for h in html_files:
         for r in refs:
             if r.startswith('http') or r.startswith('#') or r.startswith('tel:'):
                 continue
-            clean_r = r.split('#')[0]
+            clean_r = r.split('#')[0].split('?')[0]
             if not clean_r:
                 continue
             ref_path = os.path.normpath(os.path.join('D:/mala', clean_r.lstrip('/')))

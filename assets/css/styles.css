@@ -233,7 +233,7 @@ h1, h2, h3, .font-display {
     margin: 0 clamp(1rem, 3vw, 3rem);
 }
 .header__logo img {
-    height: 45px;
+    height: 52px;
     width: auto;
 }
 .header__logo-text {
@@ -1949,7 +1949,7 @@ html[lang="en"] .ingredient-card__name-en {
     max-width: 300px;
 }
 .footer__brand img {
-    height: 60px;
+    height: 74px;
     margin-bottom: var(--space-sm);
 }
 .footer__brand-name {
