@@ -223,7 +223,7 @@ const translations = {
         br_aoudom_seo_h2: "หม่าล่าทั่ง อ่าวอุดม สไตล์เลือกวัตถุดิบเอง",
         br_aoudom_seo_body: "ร้านหม่าล่า อ่าวอุดม ที่ให้คุณคุมทุกอย่างเอง LA-MI MALATANG สาขาอ่าวอุดม อำเภอศรีราชา เป็นอีกทางเลือกของคนหาร้านหม่าล่า ชลบุรี ที่ไม่ต้องสั่งเป็นเซ็ต หยิบตะกร้าเลือกวัตถุดิบที่ชอบจากตู้แช่ ทั้งเนื้อวัวสไลซ์ หมูสไลซ์ ลูกชิ้น อาหารทะเล ผักสด เต้าหู้ และเส้น แล้วเลือกน้ำซุปก่อนนำไปชั่งน้ำหนัก",
         br_huaiyai_seo_h2: "หม่าล่าทั่งเปิดใหม่ ที่ห้วยใหญ่ บางละมุง",
-        br_huaiyai_seo_body: "ใครที่มองหาหม่าล่าทั่ง ห้วยใหญ่ ร้านหม่าล่า ห้วยใหญ่ หรือร้านหม่าล่าใกล้ห้วยใหญ่ LA-MI MALATANG เปิดสาขาใหม่ที่ตำบลห้วยใหญ่ อำเภอบางละมุง ชลบุรี วันที่ 1 ตุลาคมนี้ รูปแบบเดียวกับสาขาพัทยาและสาขาอ่าวอุดม คือเลือกวัตถุดิบเองจากตู้แช่ เลือกน้ำซุปเอง แล้วชั่งน้ำหนักคิดราคา ดูตำแหน่งร้านได้จากแผนที่ด้านล่าง สอบถามเพิ่มเติมโทร 098-894-9615 หรือติดตามทาง Facebook Page",
+        br_huaiyai_seo_body: "ใครที่มองหาหม่าล่าทั่ง ห้วยใหญ่ ร้านหม่าล่า ห้วยใหญ่ หรือร้านหม่าล่าใกล้ห้วยใหญ่ LA-MI MALATANG เปิดสาขาใหม่ที่ตำบลห้วยใหญ่ อำเภอบางละมุง ชลบุรี วันที่ 1 ตุลาคมนี้ รูปแบบเดียวกับสาขาพัทยาและสาขาอ่าวอุดม คือเลือกวัตถุดิบเองจากตู้แช่ เลือกน้ำซุปเอง แล้วชั่งน้ำหนักคิดราคา ดูตำแหน่งร้านได้จากแผนที่ด้านล่าง สอบถามเพิ่มเติมโทร 098-894-9615 (คุณแพรว) หรือติดตามทาง Facebook Page",
         br_phone_title: "เบอร์โทร",
         br_map_title: "แผนที่และเส้นทาง",
         br_other_title: "สาขาอื่นของเรา",
@@ -262,7 +262,9 @@ const translations = {
         soup5_desc: "เข้มข้น จัดจ้าน คลุกเคล้าแห้ง",
         insta_sub: "ติดตามข่าวสารและโปรโมชั่นพิเศษทาง Facebook Page",
         footer_tagline: "อร่อย สะอาด สดใหม่ทุกวัน",
-        calc_note: "ราคานี้เป็นการคำนวณเบื้องต้น ราคาและเงื่อนไขอาจเปลี่ยนแปลงตามสาขา"
+        calc_note: "ราคานี้เป็นการคำนวณเบื้องต้น ราคาและเงื่อนไขอาจเปลี่ยนแปลงตามสาขา",
+        phone_main: "087-495-5835 (คุณญ่า)",
+        phone_huaiyai: "098-894-9615 (คุณแพรว)"
     },
 
     en: {
@@ -492,7 +494,7 @@ const translations = {
         br_huaiyai_name: "Huai Yai Branch",
         br_huaiyai_h1: "DIY Malatang in Huai Yai",
         br_huaiyai_addr: "Huai Yai, Bang Lamung, Chon Buri",
-        br_huaiyai_intro: "LA-MI MALATANG Huai Yai in Bang Lamung, Chon Buri opens on 1 October. Call 098-894-9615. The same DIY malatang as our Pattaya and Ao Udom branches: over 60 ingredients, 5 soup bases, 45 THB per 100g by weight.",
+        br_huaiyai_intro: "LA-MI MALATANG Huai Yai in Bang Lamung, Chon Buri opens on 1 October. Call 098-894-9615 (Khun Praew). The same DIY malatang as our Pattaya and Ao Udom branches: over 60 ingredients, 5 soup bases, 45 THB per 100g by weight.",
         doc_title_br_huaiyai: "DIY Malatang in Huai Yai (Opening 1 October) | LA-MI MALATANG",
         footer_copy: "© 2026 LA-MI MALATANG. All Rights Reserved.",
         br_pattaya_seo_h2: "DIY Malatang in Pattaya — Pick Your Own Ingredients",
@@ -500,7 +502,7 @@ const translations = {
         br_aoudom_seo_h2: "DIY Malatang in Ao Udom — Pick Your Own Ingredients",
         br_aoudom_seo_body: "A malatang restaurant in Ao Udom where you control everything. LA-MI MALATANG Ao Udom, in Si Racha, is another option for anyone looking for malatang in Chon Buri without ordering a set menu. Grab a basket, pick what you like from the chiller — sliced beef, sliced pork, meatballs, seafood, fresh vegetables, tofu and noodles — then choose your soup base before it goes on the scale.",
         br_huaiyai_seo_h2: "A New Malatang Restaurant in Huai Yai, Bang Lamung",
-        br_huaiyai_seo_body: "If you are looking for malatang in Huai Yai, or a malatang restaurant near Huai Yai, LA-MI MALATANG opens its new branch in Huai Yai, Bang Lamung, Chon Buri on 1 October. It works exactly like our Pattaya and Ao Udom branches: pick your own ingredients from the chiller, choose your soup base, then pay by weight. Find us on the map below, call 098-894-9615, or follow our Facebook Page.",
+        br_huaiyai_seo_body: "If you are looking for malatang in Huai Yai, or a malatang restaurant near Huai Yai, LA-MI MALATANG opens its new branch in Huai Yai, Bang Lamung, Chon Buri on 1 October. It works exactly like our Pattaya and Ao Udom branches: pick your own ingredients from the chiller, choose your soup base, then pay by weight. Find us on the map below, call 098-894-9615 (Khun Praew), or follow our Facebook Page.",
         br_fact_menu: "See all 60+ ingredients on the <a href=\"/menu\">menu page</a>",
         br_fact_price: "Priced by weight — 45 THB per 100g, however much or little you take",
         br_fact_sauce: "A self-serve sauce bar: sesame sauce, chilli oil and fried garlic",
@@ -524,7 +526,9 @@ const translations = {
         soup5_desc: "Rich and punchy, tossed without broth",
         insta_sub: "Follow our Facebook Page for news and special promotions",
         footer_tagline: "Tasty, clean and fresh every day",
-        calc_note: "This is an estimate — prices and conditions may vary by branch"
+        calc_note: "This is an estimate — prices and conditions may vary by branch",
+        phone_main: "087-495-5835 (Khun Ya)",
+        phone_huaiyai: "098-894-9615 (Khun Praew)"
     }
 };
 
