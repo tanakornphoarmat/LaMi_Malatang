@@ -17,7 +17,7 @@ assets = [
     '/assets/images/steps/step4_enjoy.jpg',
     '/assets/images/reviews/review_1.jpg',
     '/assets/images/reviews/review_10.jpg',
-    '/assets/images/branches/branch_huaiyai_coming_soon.jpg',
+    '/assets/images/branches/branch_huaiyai_opening.jpg',
     '/robots.txt',
     '/sitemap.xml'
 ]
