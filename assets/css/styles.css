@@ -1609,6 +1609,13 @@ html[lang="en"] .ingredient-card__name-en {
     position: absolute;
     top: 12px;
     left: 12px;
+    z-index: 2;
+}
+/* Solid so the label reads over busy poster images */
+.promo-card__badge.badge--primary {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    border-color: var(--clr-primary);
 }
 .promo-card__body {
     padding: var(--space-md);
@@ -1633,6 +1640,15 @@ html[lang="en"] .ingredient-card__name-en {
     margin-bottom: var(--space-sm);
     line-height: 1.6;
 }
+/* News cards carry square/tall posters — show them square, anchored to the top */
+.news-card .promo-card__img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+.news-card .promo-card__img img {
+    object-position: top;
+}
+
 /* ---------- REAL REVIEW CARDS (10 IMAGES) ---------- */
 .real-review-grid {
     display: grid;
