@@ -11,38 +11,21 @@
 
 const NEWS = [
     {
-        id: 'hiring-huaiyai',
-        date: '2026-09-27',
-        category: 'news',
-        image: '/assets/images/news/hiring_huaiyai.jpg',
+        id: 'new-customer',
+        date: '2026-10-06',
+        category: 'promo',
+        image: '/assets/images/promo/huaiyai_now_open.jpg',
         th: {
-            title: 'รับสมัครพนักงาน สาขาห้วยใหญ่',
-            desc: 'รับแม่ครัว ผู้ช่วยครัว และพนักงานเสิร์ฟ อย่างละ 1 คน รายได้ 10,000 บาท/เดือน (ไม่รวม OT) สมัครที่ร้านหรือโทร 098-894-9615 (คุณแพรว)',
-            button: 'ดูโปสเตอร์'
+            title: 'โปรโมชั่นต้อนรับลูกค้าใหม่',
+            desc: 'ฉลองเปิดสาขาห้วยใหญ่ รับส่วนลด 10% สำหรับลูกค้า 100 คนแรกเท่านั้น พร้อมบัตรสะสมแต้มแลกรางวัล',
+            button: 'ดูรายละเอียด'
         },
         en: {
-            title: 'Now Hiring at Huai Yai',
-            desc: 'One cook, one kitchen assistant and one server. 10,000 THB/month (excluding OT). Apply in store or call 098-894-9615 (Khun Praew).',
-            button: 'View poster'
+            title: 'New Customer Welcome',
+            desc: 'Celebrating our Huai Yai opening: 10% off for the first 100 customers, plus a stamp card that earns rewards.',
+            button: 'See details'
         },
-        link: '/assets/images/news/hiring_huaiyai.jpg'
-    },
-    {
-        id: 'huaiyai-opening',
-        date: '2026-09-22',
-        category: 'news',
-        image: '/assets/images/branches/branch_huaiyai_opening.jpg',
-        th: {
-            title: 'เปิดสาขาห้วยใหญ่ 1 ตุลาคม 2026',
-            desc: 'LA-MI MALATANG สาขาห้วยใหญ่ พัทยา ชลบุรี พร้อมเปิดให้บริการ 1 ตุลาคมนี้ หม่าล่าทั่ง DIY วัตถุดิบคุณภาพ บรรยากาศสบาย ๆ มีที่จอดรถ',
-            button: 'ดูข้อมูลสาขา'
-        },
-        en: {
-            title: 'Huai Yai Branch Opens 1 October 2026',
-            desc: 'LA-MI MALATANG Huai Yai, Pattaya, Chon Buri opens on 1 October. DIY malatang, quality ingredients, a relaxed space and easy parking.',
-            button: 'Branch details'
-        },
-        link: '/branches/huai-yai'
+        link: '/promotions/new-customer'
     }
 ];
 
