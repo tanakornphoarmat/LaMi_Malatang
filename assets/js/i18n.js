@@ -122,6 +122,10 @@ const translations = {
         map_sub: "แผนที่สาขาของ LA-MI MALATANG",
         hours_title: "เวลาเปิด-ปิด",
         days_mon_fri: "จันทร์–ศุกร์",
+        days_mon: "จันทร์",
+        days_tue: "อังคาร",
+        days_wed_fri: "พุธ–ศุกร์",
+        closed: "ปิด",
         days_sat: "เสาร์",
         days_sun: "อาทิตย์",
 
@@ -135,6 +139,10 @@ const translations = {
         tab_event: "กิจกรรม",
         promo_follow_title: "ไม่พลาดทุกโปรโมชั่นหม่าล่าทั่ง",
         promo_follow_sub: "ติดตามข่าวสารและโปรโมชั่นล่าสุดจาก LA-MI MALATANG",
+        promo_expired_title: "โปรโมชั่นสิ้นสุดแล้ว",
+        promo_expired_body: "โปรโมชั่นต้อนรับลูกค้าใหม่สิ้นสุดแล้ว กรุณาติดตามข่าวสารและข้อเสนอใหม่จาก LA-MI MALATANG",
+        promo_expired_back: "ดูข่าวสารล่าสุด",
+        no_current_news: "ขณะนี้ยังไม่มีข่าวสารหรือโปรโมชั่นใหม่",
         btn_follow_fb: "ติดตามเราบน FACEBOOK",
 
         // Footer
@@ -415,6 +423,10 @@ const translations = {
         map_sub: "Interactive maps for LA-MI Malatang branches",
         hours_title: "Opening Hours",
         days_mon_fri: "Mon–Fri",
+        days_mon: "Monday",
+        days_tue: "Tuesday",
+        days_wed_fri: "Wednesday–Friday",
+        closed: "Closed",
         days_sat: "Saturday",
         days_sun: "Sunday",
 
@@ -428,6 +440,10 @@ const translations = {
         tab_event: "Events",
         promo_follow_title: "DON'T MISS ANY PROMOTION",
         promo_follow_sub: "Follow the latest news & promotions from LA-MI MALATANG",
+        promo_expired_title: "Promotion ended",
+        promo_expired_body: "The new customer welcome promotion has ended. Follow LA-MI MALATANG for the latest news and offers.",
+        promo_expired_back: "View latest news",
+        no_current_news: "There are no new announcements or promotions right now.",
         btn_follow_fb: "FOLLOW US ON FACEBOOK",
 
         // Footer

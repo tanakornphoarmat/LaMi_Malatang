@@ -9,25 +9,7 @@
    The homepage shows the newest 3; /promotions shows them all.
    ========================================================================== */
 
-const NEWS = [
-    {
-        id: 'new-customer',
-        date: '2026-10-06',
-        category: 'promo',
-        image: '/assets/images/promo/huaiyai_now_open.jpg',
-        th: {
-            title: 'โปรโมชั่นต้อนรับลูกค้าใหม่',
-            desc: 'ฉลองเปิดสาขาห้วยใหญ่ รับส่วนลด 10% สำหรับลูกค้า 100 คนแรกเท่านั้น พร้อมบัตรสะสมแต้มแลกรางวัล',
-            button: 'ดูรายละเอียด'
-        },
-        en: {
-            title: 'New Customer Welcome',
-            desc: 'Celebrating our Huai Yai opening: 10% off for the first 100 customers, plus a stamp card that earns rewards.',
-            button: 'See details'
-        },
-        link: '/promotions/new-customer'
-    }
-];
+const NEWS = [];
 
 (function () {
     const BADGE = {
@@ -98,6 +80,11 @@ const NEWS = [
     // data-news-limit caps how many
     const sorted = NEWS.slice().sort((a, b) => b.date.localeCompare(a.date));
     document.querySelectorAll('[data-news-list]').forEach(list => {
+        if (sorted.length === 0) {
+            const empty = el('p', 'promo-grid__empty', 'no_current_news');
+            list.append(empty);
+            return;
+        }
         const limit = parseInt(list.dataset.newsLimit, 10) || sorted.length;
         list.prepend(...sorted.slice(0, limit).map(buildCard));
     });
